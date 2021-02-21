@@ -1,0 +1,9 @@
+list:
+  - name: Strona główna
+    link: /
+  - name: Oferta
+    link: /oferta
+  - name: Kontakt
+    link: /kontakt
+aria:
+  navbar_toggler_label: Przełącz nawigację
