@@ -1,0 +1,24 @@
+collections_dir: _collections
+
+collections:
+  contact:
+    output: true
+    permalink: /:path/
+  home:
+    output: true
+    permalink: /:path
+  offer:
+    output: true
+    permalink: /oferta/:path
+
+defaults:
+  - scope:
+      path: ""
+      type: contact
+    values:
+      layout: contact
+  - scope:
+      path: ""
+      type: home
+    values:
+      layout: home
