@@ -1,0 +1,9 @@
+img:
+  alt: Infografika
+  name: homepage-infographic.jpg
+text: Świadczymy usługi hydrauliczne na terenie <b>Stargardu</b> i <b>okolic</b>. Specjalizujemy się w <b>[...]</b>.
+button:
+  - name: Skontaktuj się
+    link: /kontakt
+  - name: Zobacz ofertę
+    link: /oferta
