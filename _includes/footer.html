@@ -1,0 +1,5 @@
+<footer class="text-center my-5">
+	{% for item in site.data.footer %}
+		<a class="link-dark mx-3" href="{{ item.link }}">{{ item.name }}</a>
+	{% endfor %}
+</footer>
