@@ -22,3 +22,6 @@ defaults:
       type: home
     values:
       layout: home
+
+# Custom configuration
+images_dir: /assets/img/
