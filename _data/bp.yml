@@ -8,7 +8,7 @@
 # ...
 # bp-12 : <image_directory>    # <(12/12 * containter_max_width) - gap_width>
 
-sm    : "576px"    # 576
+sm    : "576px"
 sm_1  : "all/"    # 21
 sm_2  : "all/"    # 66
 sm_3  : "all/"    # 111
