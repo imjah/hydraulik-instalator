@@ -1,27 +1,9 @@
 collections_dir: _collections
 
 collections:
-  contact:
-    output: true
-    permalink: /:path/
-  home:
-    output: true
-    permalink: /:path
   service:
     output: true
     permalink: /uslugi/:path/
-
-defaults:
-  - scope:
-      path: ""
-      type: contact
-    values:
-      layout: contact
-  - scope:
-      path: ""
-      type: home
-    values:
-      layout: home
 
 # Custom configuration
 images_dir: /assets/img/
