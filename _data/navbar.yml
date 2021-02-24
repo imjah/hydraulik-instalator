@@ -1,9 +1,2 @@
-list:
-  - name: Strona główna
-    link: /
-  - name: Usługi
-    link: /uslugi
-  - name: Kontakt
-    link: /kontakt
 aria:
   navbar_toggler_label: Przełącz nawigację

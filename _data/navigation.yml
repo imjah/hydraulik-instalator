@@ -1,0 +1,6 @@
+- name: Strona główna
+  link: /
+- name: Usługi
+  link: /uslugi
+- name: Kontakt
+  link: /kontakt
