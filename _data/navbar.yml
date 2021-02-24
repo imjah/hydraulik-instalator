@@ -1,8 +1,8 @@
 list:
   - name: Strona główna
     link: /
-  - name: Oferta
-    link: /oferta
+  - name: Usługi
+    link: /uslugi
   - name: Kontakt
     link: /kontakt
 aria:

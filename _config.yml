@@ -7,9 +7,9 @@ collections:
   home:
     output: true
     permalink: /:path
-  offer:
+  service:
     output: true
-    permalink: /oferta/:path
+    permalink: /uslugi/:path
 
 defaults:
   - scope:
