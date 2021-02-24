@@ -1,6 +1,9 @@
 collections_dir: _collections
 
 collections:
+  pages:
+    output: true
+    permalink: /:path
   service:
     output: true
     permalink: /uslugi/:path/
