@@ -15,11 +15,13 @@
 			<div class="text-center text-md-start my-5 mx-3 mt-md-0 mx-md-0">
 				<p class="lead">{{ site.data.infographic.text }}</p>
 				<div class="mt-4">
-					<a href="{{ site.data.infographic.button[0].link }}" class="btn btn-primary ">
-						{{ site.data.infographic.button[0].name }}
+					{% assign contact = site.data.navigation | where: 'id', 3 %}
+					<a href="{{ contact[0].link }}" class="btn btn-primary">
+						{{ site.data.infographic.button.contact.text }}
 					</a>
-					<a href="{{ site.data.infographic.button[1].link }}" class="btn btn-outline-primary mt-md-1 mt-lg-0">
-						{{ site.data.infographic.button[1].name }}
+					{% assign service = site.data.navigation | where: 'id', 2 %}
+					<a href="{{ service[0].link }}" class="btn btn-outline-primary mt-md-1 mt-lg-0">
+						{{ site.data.infographic.button.service.text }}
 					</a>
 				</div>
 			</div>
