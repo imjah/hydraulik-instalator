@@ -9,7 +9,7 @@ collections:
     permalink: /:path
   service:
     output: true
-    permalink: /uslugi/:path
+    permalink: /uslugi/:path/
 
 defaults:
   - scope:
