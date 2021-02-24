@@ -1,6 +1,9 @@
-- name: Strona główna
+- id  : 1
+  name: Strona główna
   link: /
-- name: Usługi
+- id  : 2
+  name: Usługi
   link: /uslugi
-- name: Kontakt
+- id  : 3
+  name: Kontakt
   link: /kontakt
