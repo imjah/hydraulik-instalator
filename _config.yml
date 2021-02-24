@@ -8,5 +8,12 @@ collections:
     output: true
     permalink: /uslugi/:path/
 
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+
 # Custom configuration
 images_dir: /assets/img/
