@@ -4,7 +4,7 @@ collections:
   pages:
     output: true
     permalink: /:path
-  service:
+  services:
     output: true
     permalink: /uslugi/:path/
 
