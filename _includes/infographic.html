@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mb-5">
 	<div class="row">
 		<div class="col-12 col-md-8">
 			<picture>
@@ -11,19 +11,13 @@
 				<img class="img-fluid" src="{{ dir }}{{ site.data.bp.sm_12 }}{{ name }}" alt="{{ site.data.infographic.img.alt }}">
 			</picture>
 		</div>
-		<div class="col-12 col-md-4 d-flex align-items-center">
-			<div class="text-center text-md-start my-5 mx-3 mt-md-0 mx-md-0">
+		<div class="col-12 col-md-4 align-self-md-center">
+			<div class="text-center text-md-start mt-4 mx-2 mt-md-0 mx-md-0 mb-md-5">
 				<p class="lead">{{ site.data.infographic.text }}</p>
-				<div class="mt-4">
-					{% assign contact = site.data.navigation | where: 'id', 3 %}
-					<a href="{{ contact[0].link }}" class="btn btn-primary">
-						{{ site.data.infographic.button.contact.text }}
-					</a>
-					{% assign service = site.data.navigation | where: 'id', 2 %}
-					<a href="{{ service[0].link }}" class="btn btn-outline-primary mt-md-1 mt-lg-0">
-						{{ site.data.infographic.button.service.text }}
-					</a>
-				</div>
+				<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">
+					{% include icon_telephone.html %}
+					{{ site.data.contact.phone }}
+				</a>
 			</div>
 		</div>
 	</div>
