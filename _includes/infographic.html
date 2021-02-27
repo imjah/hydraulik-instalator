@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-12 col-md-8">
 			<picture>
-				{% capture dir %}{{ site.images_dir }}{% endcapture %}
+				{% capture dir %}{{ site.images_dir }}/{% endcapture %}
 				{% capture name %}{{ site.data.infographic.img.name }}{% endcapture %}
 				<source media="(min-width:{{ site.data.bp.md }})" srcset="{{ dir }}{{ site.data.bp.md_8 }}{{ name }}">
 				<source media="(min-width:{{ site.data.bp.lg }})" srcset="{{ dir }}{{ site.data.bp.lg_8 }}{{ name }}">

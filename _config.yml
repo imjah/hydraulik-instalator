@@ -17,4 +17,4 @@ sass:
 
 # Custom configuration
 styles_dir: /assets/css
-images_dir: /assets/img/
+images_dir: /assets/img
