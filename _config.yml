@@ -12,6 +12,9 @@ defaults:
     values:
       layout: "service"
 
+sass:
+  style: compressed
+
 # Custom configuration
 styles_dir: /assets/css
 images_dir: /assets/img/
