@@ -15,8 +15,8 @@
 			<div class="text-center text-md-start mt-4 mx-2 mt-md-0 mx-md-0 mb-md-5">
 				<p class="lead">{{ site.data.infographic.text }}</p>
 				<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">
-					{% include icon_telephone.html %}
-					{{ site.data.contact.phone }}
+					{% include icon/telephone.html %}
+					{{ site.data.contact.phone | replace: '-', ' '}}
 				</a>
 			</div>
 		</div>
