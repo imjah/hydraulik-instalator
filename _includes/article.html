@@ -1,0 +1,29 @@
+<section>
+	<div class="container">
+		<div class="row">
+			{% assign collapse-breakpoint = 'lg' %}
+			<div class="col-12 col-{{ collapse-breakpoint }}-3">
+				<!-- Article navigation toggle -->
+				<div class="d-flex d-{{ collapse-breakpoint }}-none py-2">
+					<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#article-nav" aria-expanded="false" aria-controls="Przełącz nawigację usług">
+						<i class="bi bi-list-ul"></i>
+						Usługi
+					</button>
+				</div>
+				<!-- Article navigation -->
+				<nav class="d-{{ collapse-breakpoint }}-block collapse pb-2" id="article-nav">
+					<div class="list-group">
+						{% for service in site.services %}
+							<a href="{{ service.url }}" class="list-group-item list-group-item-action{% if service.url == page.url %} active" aria-current="true"{% else %}"{% endif %}>
+								{{ service.title }}
+							</a>
+						{% endfor %}
+					</div>
+				</nav>
+			</div>
+			<article class="col-12 col-{{ collapse-breakpoint }}-9">
+				{{ content }}
+			</article>
+		</div>
+	</div>
+</section>
