@@ -2,14 +2,14 @@
 	<div class="container py-4">
 		<div class="text-center text-md-start d-md-flex justify-content-md-between">
 			<div class="">
-				{% for link in site.data.footer.links %}
-				<a class="link-dark me-3 me-last-0" href="{{ link.href }}">
-					{{ link.name }}
-				</a>
+				{% for link in site.data.footer %}
+					<a class="link-dark me-3 me-last-0" href="{{ link.href }}">
+						{{ link.name }}
+					</a>
 				{% endfor %}
 			</div>
 			<div class="mt-3 mt-md-0">
-				&copy; {{ site.data.footer.made.at }}
+				&copy; 2021
 			</div>
 		</div>
 	</div>

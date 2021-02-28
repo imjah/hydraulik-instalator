@@ -13,8 +13,8 @@
 			{% endfor %}
 		</div>
 		<div class="text-center">
-			{% assign service = site.data.navigation | where: 'id', 2 %}
-			<a href="{{ service[0].link }}" class="btn btn-primary">{{ site.data.services_presentation.button.more.text }}</a>
+			{% assign service = site.data.navbar | where: 'id', 2 %}
+			<a href="{{ service[0].href }}" class="btn btn-primary">Więcej szczegółów</a>
 		</div>
 	</div>
 </div>

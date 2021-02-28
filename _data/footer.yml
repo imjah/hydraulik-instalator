@@ -1,5 +1,3 @@
-links:
-  - name: GitHub
-    href: https://github.com/
-made:
-  at: 2021
+- id  : 1
+  name: GitHub
+  href: https://github.com/
