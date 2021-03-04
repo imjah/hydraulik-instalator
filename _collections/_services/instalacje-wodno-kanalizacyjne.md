@@ -1,4 +1,4 @@
 ---
 title: Instalacje wodno-kanalizacyjne
-description: Opis 1
+description: Montaż rur doprowadzających i odprowadzających wodę wewnątrz oraz na zewnątrz budynku.
 ---
