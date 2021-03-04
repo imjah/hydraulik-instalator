@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html dir="{{ site.data.html.dir }}" lang="{{ site.data.html.lang }}">
 	{% include head.html %}
-	<body>
+	<body class="d-flex flex-column min-vh-100">
 		<header>
 			{% include navbar.html %}
 		</header>
-		<main class="min-vh-100">
+		<main class="flex-fill">
 			{% include article.html %}
 		</main>
 		{% include footer.html %}
