@@ -1,3 +1,4 @@
 ---
 layout: service
+title: Usługi
 ---
