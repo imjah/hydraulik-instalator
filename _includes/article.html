@@ -1,4 +1,4 @@
-<section>
+<section class="pb-5">
 	<div class="container">
 		<div class="row">
 			{% assign sidebar-title = 'Kategorie' %}
@@ -11,10 +11,11 @@
 						{{ sidebar-title }}
 					</button>
 				</div>
+
 				<!-- Article navigation -->
 				<nav class="d-{{ collapse-breakpoint }}-block collapse pb-2" id="article-nav">
 					<div class="list-group">
-						<h6 class="text-secondary">{{ sidebar-title }}</h6>
+						<h6 class="d-none d-{{ collapse-breakpoint }}-block text-secondary">{{ sidebar-title }}</h6>
 						{% for service in site.services %}
 							<a href="{{ service.url }}" class="list-group-item list-group-item-action{% if service.url == page.url %} active" aria-current="true"{% else %}"{% endif %}>
 								{{ service.title }}
@@ -25,6 +26,20 @@
 			</div>
 			<article class="col-12 col-{{ collapse-breakpoint }}-9">
 				{{ content }}
+
+				<!-- Gallery -->
+				<section>
+					{% for group in page.gallery %}
+						<div>
+							<h3>{{ group.title }}</h3>
+							<div class="column-count-2 column-count-md-3 column-count-xxl-4 column-gap-1">
+								{% for image in group.images %}
+									<img class="img-fluid border rounded m-1" src="/assets/img/300/{{ image.name }}" alt="{{ image.alt }}">
+								{% endfor %}
+							</div>
+						</div>
+					{% endfor %}
+				</section>
 			</article>
 		</div>
 	</div>
