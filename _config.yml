@@ -1,4 +1,4 @@
-collections_dir: _collections
+collections_dir : _collections
 
 collections:
   services:
@@ -14,7 +14,3 @@ defaults:
 
 sass:
   style: compressed
-
-# Custom configuration
-styles_dir: /assets/css
-images_dir: /assets/img
