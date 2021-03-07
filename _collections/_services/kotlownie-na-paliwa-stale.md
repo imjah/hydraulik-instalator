@@ -1,4 +1,4 @@
 ---
 title: Kotłownie na paliwa stałe
-description: Opis 3
+description: Kotły zasilane ekogroszkiem lub peletem z automatycznym podajnikiem.
 ---

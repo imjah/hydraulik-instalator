@@ -1,4 +1,4 @@
 ---
 title: Kotłownie na gaz
-description: Opis 2
+description: Kotły tradycyjne lub kondensacyjne, jedno- lub dwufunkcyjne.
 ---

@@ -1,4 +1,4 @@
 ---
 title: Ogrzewanie grzejnikowe
-description: Opis 4
+description: Ogrzewanie wodnymi grzejnikami z aluminium lub stali.
 ---

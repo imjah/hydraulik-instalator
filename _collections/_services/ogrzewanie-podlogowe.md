@@ -1,4 +1,4 @@
 ---
 title: Ogrzewanie podłogowe
-description: Opis 6
+description: Ogrzewanie podłogowe wodne składające się z rurek z tworzywa sztucznego.
 ---

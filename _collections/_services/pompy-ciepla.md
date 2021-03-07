@@ -1,4 +1,4 @@
 ---
 title: Pompy ciepła
-description: Opis 6
+description: Powietrzne pompy ciepła.
 ---
