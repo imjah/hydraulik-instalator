@@ -1,46 +1,45 @@
-<section class="pb-5">
+<section>
 	<div class="container">
-		<div class="row">
-			{% assign sidebar-title = 'Kategorie' %}
-			{% assign collapse-breakpoint = 'lg' %}
-			<div class="col-12 col-{{ collapse-breakpoint }}-3">
-				<!-- Article navigation toggle -->
-				<div class="d-flex d-{{ collapse-breakpoint }}-none py-2">
-					<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#article-nav" aria-expanded="false" aria-controls="Przełącz nawigację usług">
-						<i class="bi bi-list-ul"></i>
-						{{ sidebar-title }}
-					</button>
-				</div>
-
-				<!-- Article navigation -->
-				<nav class="d-{{ collapse-breakpoint }}-block collapse pb-2" id="article-nav">
-					<div class="list-group">
-						<h6 class="d-none d-{{ collapse-breakpoint }}-block text-secondary">{{ sidebar-title }}</h6>
-						{% for service in site.services %}
-							<a href="{{ service.url }}" class="list-group-item list-group-item-action{% if service.url == page.url %} active" aria-current="true"{% else %}"{% endif %}>
-								{{ service.title }}
-							</a>
-						{% endfor %}
+		<div class="pb-5">
+			<div class="row">
+				<!-- Sidebar -->
+				{% assign sidebar_title = 'Kategorie' %}
+				{% assign sidebar_collapse_on = 'lg' %}
+				<div class="col-12 col-{{ sidebar_collapse_on }}-3">
+					<!-- Sidebar toggle -->
+					<div class="d-flex d-{{ sidebar_collapse_on }}-none py-2">
+						<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#article-nav" aria-expanded="false" aria-controls="Przełącz nawigację usług">
+							<i class="bi bi-list-ul"></i>
+							{{ sidebar_title }}
+						</button>
 					</div>
-				</nav>
-			</div>
-			<article class="col-12 col-{{ collapse-breakpoint }}-9">
-				{{ content }}
-
-				<!-- Gallery -->
-				<section>
-					{% for group in page.gallery %}
-						<div>
-							<h3>{{ group.title }}</h3>
-							<div class="column-count-2 column-count-md-3 column-count-xxl-4 column-gap-1">
-								{% for image in group.images %}
-									<img class="img-fluid border rounded m-1" src="/assets/img/300/{{ image.name }}" alt="{{ image.alt }}">
+					<nav class="d-{{ sidebar_collapse_on }}-block collapse pb-2" id="article-nav">
+						<div class="list-group">
+							<h6 class="d-none d-{{ sidebar_collapse_on }}-block text-secondary">{{ sidebar_title }}</h6>
+							{% for service in site.services %}
+								<a href="{{ service.url }}" class="list-group-item list-group-item-action{% if service.url == page.url %} active" aria-current="true"{% else %}"{% endif %}>
+									{{ service.title }}
+								</a>
+							{% endfor %}
+						</div>
+					</nav>
+				</div>
+				<!-- Article -->
+				<article class="col-12 col-{{ sidebar_collapse_on }}-9">
+					{{ content }}
+					<!-- Gallery -->
+					<section>
+						<h1>Galeria</h1>
+							<div class="column-count-2 column-count-md-3 column-count-xl-4 column-gap-1">
+								{% for image in page.gallery %}
+									<a href="/assets/img/1400/{{ image.name }}">
+										<img class="img-fluid border rounded mb-1" src="/assets/img/300/{{ image.name }}" alt="{{ image.alt }}">
+									</a>
 								{% endfor %}
 							</div>
-						</div>
-					{% endfor %}
-				</section>
-			</article>
+					</section>
+				</article>
+			</div>
 		</div>
 	</div>
 </section>
