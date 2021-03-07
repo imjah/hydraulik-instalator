@@ -13,7 +13,7 @@
 			{% endfor %}
 		</div>
 		<div class="text-center">
-			{% assign service = site.data.navbar | where: 'id', 2 %}
+			{% assign service = site.data.navigation.navbar | where: 'id', 2 %}
 			<a href="{{ service[0].href }}" class="btn btn-primary">Więcej szczegółów</a>
 		</div>
 	</div>

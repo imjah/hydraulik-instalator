@@ -1,0 +1,14 @@
+navbar:
+  - id  : 1
+    name: Strona główna
+    href: /
+  - id  : 2
+    name: Usługi
+    href: /uslugi/
+  - id  : 3
+    name: Kontakt
+    href: /kontakt/
+footer:
+  - id  : 1
+    name: GitHub
+    href: https://github.com/
