@@ -1,25 +1,24 @@
-<div class="container mb-5">
-	<div class="row">
-		<div class="col-12 col-md-8">
-			<picture>
-				{% capture dir %}{{ site.images_dir }}/{% endcapture %}
-				{% assign name = "homepage-infographic.jpg" %}
-				<source media="(min-width:{{ site.data.bp.md }})" srcset="{{ dir }}{{ site.data.bp.md_8 }}{{ name }}">
-				<source media="(min-width:{{ site.data.bp.lg }})" srcset="{{ dir }}{{ site.data.bp.lg_8 }}{{ name }}">
-				<source media="(min-width:{{ site.data.bp.xl }})" srcset="{{ dir }}{{ site.data.bp.xl_8 }}{{ name }}">
-				<source media="(min-width:{{ site.data.bp.xxl }})" srcset="{{ dir }}{{ site.data.bp.xxl_8 }}{{ name }}">
-				<img class="img-fluid" src="{{ dir }}{{ site.data.bp.sm_12 }}{{ name }}" alt="Infografika">
-			</picture>
-		</div>
-		<div class="col-12 col-md-4 align-self-md-center">
-			<div class="text-center text-md-start mt-4 mx-2 mt-md-0 mx-md-0 mb-md-5">
-				<p class="lead">
-					Świadczymy usługi hydrauliczne na terenie <b>Stargardu</b> i <b>okolic</b>. Specjalizujemy się w instalacjach <b>CO</b>, <b>CWU</b> oraz <b>WOD-KAN</b>.
-				</p>
-				<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">
-					<i class="bi bi-phone"></i>
-					{{ site.data.contact.phone | replace: '-', ' '}}
-				</a>
+<div class="container">
+	<div class="pb-5">
+		<div class="row">
+			<div class="col-12 col-md-8">
+				<picture>
+					{% assign name = "homepage-infographic.jpg" %}
+					<source media="(max-width: {{ site.data.breakpoint.sm }})" srcset="/assets/img/600/{{ name }}">
+					<source media="(max-width: {{ site.data.breakpoint.lg }})" srcset="/assets/img/800/{{ name }}">
+					<img class="img-fluid" src="/assets/img/1000/{{ name }}" alt="Infografika">
+				</picture>
+			</div>
+			<div class="col-12 col-md-4 align-self-md-center">
+				<div class="text-center text-md-start pt-4 px-2 pt-md-0 px-md-0 pb-md-5">
+					<p class="lead">
+						Świadczymy usługi hydrauliczne na terenie <b>Stargardu</b> i <b>okolic</b>. Specjalizujemy się w instalacjach <b>CO</b>, <b>CWU</b> oraz <b>WOD-KAN</b>.
+					</p>
+					<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">
+						<i class="bi bi-phone"></i>
+						{{ site.data.contact.phone | replace: '-', ' '}}
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
