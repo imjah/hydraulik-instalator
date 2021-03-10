@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="pb-5">
 		<div class="row">
-			<div class="col-12 col-md-8">
+			<div class="col-12 col-md-8 px-5">
 				<picture>
-					{% assign name = "homepage-infographic.jpg" %}
+					{% assign name = "homepage-infographic.png" %}
 					<source media="(max-width: {{ site.data.breakpoint.sm }})" srcset="/assets/img/600/{{ name }}">
 					<source media="(max-width: {{ site.data.breakpoint.lg }})" srcset="/assets/img/800/{{ name }}">
 					<img class="img-fluid" src="/assets/img/1000/{{ name }}" alt="Infografika">
@@ -14,7 +14,7 @@
 					<p class="lead">
 						Świadczymy usługi hydrauliczne na terenie <b>Stargardu</b> i <b>okolic</b>. Specjalizujemy się w instalacjach <b>CO</b>, <b>CWU</b> oraz <b>WOD-KAN</b>.
 					</p>
-					<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">
+					<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary text-white">
 						<i class="bi bi-phone"></i>
 						{{ site.data.contact.phone | replace: '-', ' '}}
 					</a>

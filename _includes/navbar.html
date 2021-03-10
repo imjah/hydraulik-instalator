@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-white">
+<nav class="navbar navbar-expand-sm navbar-light">
 	<div class="container-fluid">
 		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
 			<span class="navbar-toggler-icon"></span>
@@ -7,8 +7,8 @@
 			<ul class="navbar-nav ms-auto me-3 mt-3">
 				{% for link in site.data.navigation.navbar %}
 					<li class="nav-item mx-2">
-						<a class="nav-link{% if page.url == link.href %} active" aria-current="page"{% else %}"{% endif %} href="{{ link.href }}">
-							{{ link.name }}
+						<a class="nav-link fw-bold{% if page.url == link.href %} active" aria-current="page"{% else %}"{% endif %} href="{{ link.href }}">
+							<span{% if page.url == link.href %} class="border-bottom border-3 border-primary pb-2"{% endif %}>{{ link.name }}</span>
 						</a>
 					</li>
 				{% endfor %}

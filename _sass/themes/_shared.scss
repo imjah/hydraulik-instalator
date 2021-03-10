@@ -1,0 +1,31 @@
+@import "../vendors/bootstrap/variables";
+
+// Bootstrap variables
+$link-decoration: none;
+$btn-font-weight: bold;
+$headings-font-weight: bold;
+
+$theme-colors: map-merge(
+	$theme-colors, (
+		"footer": $footer,
+		"services": $services
+	)
+);
+
+// Themes-dependent components
+@import "../vendors/bootstrap/utilities";
+@import "../vendors/bootstrap/root";
+@import "../vendors/bootstrap/reboot";
+@import "../vendors/bootstrap/type";
+@import "../vendors/bootstrap/images";
+@import "../vendors/bootstrap/buttons";
+@import "../vendors/bootstrap/nav";
+@import "../vendors/bootstrap/navbar";
+@import "../vendors/bootstrap/list-group";
+@import "../vendors/bootstrap/helpers";
+@import "../vendors/bootstrap/utilities/api";
+
+// Custom classes
+.pattern-pipes {
+	background-image: url($pattern-pipes);
+}

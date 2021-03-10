@@ -1,5 +1,17 @@
-@import "vendors/bootstrap/bootstrap-custom";
-@import "modules/variables";
-@import "modules/backgrounds";
-@import "modules/spacing";
-@import "modules/transforms";
+@import "vendors/bootstrap/functions";
+@import "vendors/bootstrap/mixins";
+
+// Default theme
+@import "themes/light";
+
+// Dark theme
+@media (prefers-color-scheme: dark) {
+	@import "themes/dark";
+}
+
+// Themes-free components
+@import "modules/utilities";
+@import "vendors/bootstrap/containers";
+@import "vendors/bootstrap/grid";
+@import "vendors/bootstrap/transitions";
+@import "vendors/bootstrap/utilities/api";
