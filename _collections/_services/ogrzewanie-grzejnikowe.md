@@ -1,4 +1,4 @@
 ---
 title: Ogrzewanie grzejnikowe
-description: Ogrzewanie wodnymi grzejnikami z aluminium lub stali.
+description: Wodne ogrzewanie grzejnikowe zbudowane z kaloryferów aluminiowych lub stalowych.
 ---

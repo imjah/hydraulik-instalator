@@ -1,4 +1,4 @@
 ---
 title: Ogrzewanie kominkowe
-description: Płaszcz wodny montowany do kominka lub pieca.
+description: Instalacja płaszcza wodnego do kominka lub pieca.
 ---
