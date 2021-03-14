@@ -1,14 +1,24 @@
-<nav class="navbar navbar-expand-sm navbar-light">
-	<div class="container-fluid">
-		<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
+<div style="height: 101px"></div>
+<nav class="navbar navbar-light navbar-expand-sm fixed-top animate" id="navbar">
+	<div class="container-fluid px-xl-5">
+		<!-- Logotype -->
+		{% assign homepage = site.data.navigation.navbar | where: 'id', 1 %}
+		<a class="navbar-brand animate upscale" id="navbar-brand" href="{{ homepage[0].href }}">
+			<img src="/assets/img/logotypes/{{ site.data.brand.logo }}" alt="{{ site.data.brand.name }}">
+		</a>
+
+		<!-- Navigation toggle -->
+		<button class="navbar-toggler collapsed" id="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="collapse navbar-collapse" id="main-menu">
-			<ul class="navbar-nav ms-auto me-3 mt-3">
+
+		<!-- Navigation -->
+		<div class="navbar-collapse collapse" id="navbar-menu">
+			<ul class="navbar-nav ms-auto my-3">
 				{% for link in site.data.navigation.navbar %}
-					<li class="nav-item mx-2">
+					<li class="nav-item mx-2 me-last-0">
 						<a class="nav-link fw-bold{% if page.url == link.href %} active" aria-current="page"{% else %}"{% endif %} href="{{ link.href }}">
-							<span{% if page.url == link.href %} class="border-bottom border-3 border-primary pb-2"{% endif %}>{{ link.name }}</span>
+							<span{% if page.url == link.href %} class="border-bottom border-primary border-3 pb-2"{% endif %}>{{ link.name }}</span>
 						</a>
 					</li>
 				{% endfor %}

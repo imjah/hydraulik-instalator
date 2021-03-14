@@ -1,1 +1,27 @@
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+<script>
+	/* Navbar */
+	const navbar = document.getElementById('navbar');
+	const navbar_brand = document.getElementById('navbar-brand');
+	const navbar_toggle = document.getElementById('navbar-toggle');
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY == 0) {
+			if (navbar_toggle.classList.contains('collapsed')) {
+				navbar.classList.remove('bg-light', 'shadow-sm');
+				navbar_brand.classList.add('upscale');
+			}
+		} else {
+			navbar.classList.add('bg-light', 'shadow-sm');
+			navbar_brand.classList.remove('upscale');
+		}
+	});
+
+	navbar_toggle.addEventListener('click', () => {
+		if (window.scrollY == 0) {
+			navbar.classList.toggle('bg-light');
+			navbar.classList.toggle('shadow-sm');
+		}
+	});
+</script>

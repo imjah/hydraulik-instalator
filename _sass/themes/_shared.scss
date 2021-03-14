@@ -4,6 +4,8 @@
 $link-decoration: none;
 $btn-font-weight: bold;
 $headings-font-weight: bold;
+$navbar-brand-padding-y: 0;
+$navbar-brand-margin-end: 0;
 
 $theme-colors: map-merge(
 	$theme-colors, (
@@ -28,4 +30,21 @@ $theme-colors: map-merge(
 // Custom classes
 .pattern-pipes {
 	background-image: url($pattern-pipes);
+}
+
+.animate {
+	transition: $transition-base;
+}
+
+.navbar-brand {
+	img {
+		height: 75px;
+	}
+
+	&.upscale {
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
+			$scale_size: 50%;
+			transform: translate($scale_size / 2, $scale_size / 2) scale(100% + $scale_size);
+		}
+	}
 }
