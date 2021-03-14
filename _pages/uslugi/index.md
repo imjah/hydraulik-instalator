@@ -1,4 +1,4 @@
 ---
-layout: article
+layout: service-home
 title: Usługi
 ---
