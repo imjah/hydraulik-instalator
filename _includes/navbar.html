@@ -1,5 +1,4 @@
-<div style="height: 101px"></div>
-<nav class="navbar navbar-light navbar-expand-sm fixed-top animate" id="navbar">
+<nav class="navbar {% if navbar_dark %}navbar-dark{% else %}navbar-light{% endif %} navbar-expand-sm fixed-top animate" id="navbar">
 	<div class="container-fluid px-xl-5">
 		<!-- Logotype -->
 		{% assign homepage = site.data.navigation.navbar | where: 'id', 1 %}
