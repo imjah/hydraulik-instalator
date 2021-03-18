@@ -4,10 +4,55 @@
 	<body class="d-flex flex-column min-vh-100">
 		<header class="pattern-pipes">
 			{% include navbar.html %}
-			{% include infographic.html %}
+			<div class="container">
+				<div class="py-5 mt-5">
+					<div class="row">
+						<div class="col-12 col-md-8 px-5">
+							<picture>
+								{% assign name = "homepage-infographic.png" %}
+								<source media="(max-width: {{ site.data.breakpoint.sm }})" srcset="/assets/img/600/{{ name }}">
+								<source media="(max-width: {{ site.data.breakpoint.lg }})" srcset="/assets/img/800/{{ name }}">
+								<img class="img-fluid" src="/assets/img/1000/{{ name }}" alt="Infografika">
+							</picture>
+						</div>
+						<div class="col-12 col-md-4 align-self-md-center">
+							<div class="text-center text-md-start pt-4 px-2 pt-md-0 px-md-0 pb-md-5">
+								<p class="lead">
+									Świadczymy usługi hydrauliczne na terenie <b>Stargardu</b> i <b>okolic</b>. Specjalizujemy się w instalacjach <b>CO</b>, <b>CWU</b> oraz <b>WOD-KAN</b>.
+								</p>
+								<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary text-white">
+									<span class="d-flex align-items-center">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="me-1" viewBox="0 0 16 16"><path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/><path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+										{{ site.data.contact.phone | replace: '-', ' '}}
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 		<main class="flex-fill">
-			{% include services.html %}
+			<div class="bg-services text-white">
+				<div class="container py-5">
+					<div class="row">
+						{% for service in site.services %}
+							<div class="col-12 col-md-6 col-lg-4">
+								<article class="text-center text-md-start mb-5 mx-3">
+									<h4>
+										<a href="{{ service.url }}" class="link-light">{{ service.title }}</a>
+									</h4>
+									<p>{{ service.description }}</p>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="text-center">
+						{% assign service = site.data.navigation.navbar | where: 'id', 2 %}
+						<a href="{{ service[0].href }}" class="btn btn-primary text-white">Więcej szczegółów</a>
+					</div>
+				</div>
+			</div>
 		</main>
 		{% include footer.html %}
 		{% include script.html %}
