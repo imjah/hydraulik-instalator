@@ -18,8 +18,8 @@ $navbar-brand-margin-end: 0;
 
 $theme-colors: map-merge(
 	$theme-colors, (
-		"footer": #1976d2,
-		"services": #2196f3
+		"blue-500": #2196f3,
+		"blue-700": #1976d2
 	)
 );
 
