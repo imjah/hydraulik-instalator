@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html dir="{{ site.data.html.dir }}" lang="{{ site.data.html.lang }}">
+	{% include head.html %}
+	<body class="d-flex flex-column min-vh-100">
+		<header class="bg-blue-500">
+			<!-- Navbar -->
+			{% assign navbar_dark  = true %}
+			{% assign navbar_space = true %}
+			{% include navbar.html %}
+		</header>
+		<main class="flex-fill bg-blue-500 text-white">
+			<div class="container">
+				<div class="container">
+					<div class="row">
+						{% for service in site.services %}
+							<div class="col-12 col-md-6">
+								<article class="text-center text-md-start mb-5 mx-3">
+									<h4>
+										<a id="{{ service.title | slugify}}" class="link-light" href="{{ service.url }}">{{ service.title }}</a>
+									</h4>
+									<p>{{ service.description }}</p>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			{{ content }}
+		</main>
+		{% include footer.html %}
+		{% include script.html %}
+	</body>
+</html>
