@@ -14,3 +14,7 @@ defaults:
 
 sass:
   style: compressed
+
+plugins:
+  - octopress-minify-html
+  - jekyll-pages-directory
