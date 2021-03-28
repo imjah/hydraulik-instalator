@@ -1,4 +1,5 @@
 ---
-layout: service-home
+layout: services
 title: Usługi
+description:
 ---
