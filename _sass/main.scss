@@ -7,6 +7,8 @@
 
 $primary: #fcbe34;
 $btn-font-weight: bold;
+$link-color: inherit;
+$link-hover-color: inherit;
 $link-decoration: none;
 $headings-font-weight: bold;
 $navbar-brand-padding-y: 0;
@@ -106,4 +108,24 @@ $utilities: map-merge(
 			transform: translate($scale_size / 2, $scale_size / 2) scale(100% + $scale_size);
 		}
 	}
+}
+
+.gallery-item {
+	object-fit: cover;
+	width: 159px;
+	height: 106px;
+
+	@media (min-width: map-get($grid-breakpoints, "md")) {
+		width: 180px;
+		height: 120px;
+	}
+
+	@media (min-width: map-get($grid-breakpoints, "xl")) {
+		width: 210px;
+		height: 140px;
+	}
+}
+
+.max-vh-100 {
+	max-height: 100vh;
 }
