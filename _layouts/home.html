@@ -10,9 +10,9 @@
 						<div class="col-12 col-md-8 px-5">
 							<picture>
 								{% assign name = "homepage-infographic.png" %}
-								<source media="(max-width: {{ site.data.breakpoint.sm }})" srcset="/assets/img/600/{{ name }}">
-								<source media="(max-width: {{ site.data.breakpoint.lg }})" srcset="/assets/img/800/{{ name }}">
-								<img class="img-fluid" src="/assets/img/1000/{{ name }}" alt="Infografika">
+								<source media="(max-width: {{ site.data.breakpoint.sm }})" srcset="{{ site.baseurl }}/assets/img/600/{{ name }}">
+								<source media="(max-width: {{ site.data.breakpoint.lg }})" srcset="{{ site.baseurl }}/assets/img/800/{{ name }}">
+								<img class="img-fluid" src="{{ site.baseurl }}/assets/img/1000/{{ name }}" alt="Infografika">
 							</picture>
 						</div>
 						<div class="col-12 col-md-4 align-self-md-center">
@@ -40,7 +40,7 @@
 							<div class="col-12 col-md-6 col-lg-4">
 								<article class="text-center text-md-start mb-5 mx-3">
 									<h4>
-										<a href="{{ service.url }}" class="link-light">{{ service.title }}</a>
+										<a href="{{ site.baseurl }}{{ service.url }}" class="link-light">{{ service.title }}</a>
 									</h4>
 									<p>{{ service.description }}</p>
 								</article>
@@ -49,7 +49,7 @@
 					</div>
 					<div class="text-center">
 						{% assign service = site.data.navigation.navbar | where: 'id', 2 %}
-						<a href="{{ service[0].href }}" class="btn btn-primary text-white">Więcej szczegółów</a>
+						<a href="{{ site.baseurl }}{{ service[0].href }}" class="btn btn-primary text-white">Więcej szczegółów</a>
 					</div>
 				</div>
 			</div>

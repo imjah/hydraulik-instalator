@@ -2,8 +2,8 @@
 	<div class="container-fluid px-xl-5">
 		<!-- Logotype -->
 		{% assign homepage = site.data.navigation.navbar | where: 'id', 1 %}
-		<a class="navbar-brand animate upscale" id="navbar-brand" href="{{ homepage[0].href }}">
-			<img src="/assets/img/logotypes/{{ site.data.brand.logo }}" alt="{{ site.data.brand.name }}">
+		<a class="navbar-brand animate upscale" id="navbar-brand" href="{{ site.baseurl }}{{ homepage[0].href }}">
+			<img src="{{ site.baseurl }}/assets/img/logotypes/{{ site.data.brand.logo }}" alt="{{ site.data.brand.name }}">
 		</a>
 
 		<!-- Navigation toggle -->
@@ -16,7 +16,7 @@
 			<ul class="navbar-nav ms-auto my-3">
 				{% for link in site.data.navigation.navbar %}
 					<li class="nav-item mx-2 me-last-0">
-						<a class="nav-link fw-bold{% if page.url == link.href %} active" aria-current="page"{% else %}"{% endif %} href="{{ link.href }}">
+						<a class="nav-link fw-bold{% if page.url == link.href %} active" aria-current="page"{% else %}"{% endif %} href="{{ site.baseurl }}{{ link.href }}">
 							<span{% if page.url == link.href %} class="border-bottom border-primary border-3 pb-2"{% endif %}>{{ link.name }}</span>
 						</a>
 					</li>

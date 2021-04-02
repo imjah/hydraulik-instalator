@@ -90,7 +90,7 @@ $utilities: map-merge(
 }
 
 .pattern-pipes {
-	background-image: url("/assets/img/patterns/pipes.png");
+	background-image: url($baseurl + "/assets/img/patterns/pipes.png");
 }
 
 .animate {

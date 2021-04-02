@@ -12,14 +12,14 @@
 			<div class="container py-3">
 				<aside class="mb-3">
 					{% assign services_link = site.data.navigation.navbar | where: 'id', 2 %}
-					<a href="{{ services_link[0].href }}#{{ page.title | slugify }}">
+					<a href="{{ site.baseurl }}{{ services_link[0].href }}#{{ page.title | slugify }}">
 						<i class="bi bi-arrow-left-circle text-primary"></i>
 						Usługi
 					</a>
 				</aside>
 				<span class="text-center">
 					<h1>
-						<a href="{{ page.url }}">{{ page.title }}</a>
+						<a href=".">{{ page.title }}</a>
 					</h1>
 					<p>{{ page.description }}</p>
 				</span>
@@ -46,8 +46,8 @@
 								</div>
 								{% for img in group.images %}
 									<div class="bg-light rounded p-2">
-										<a href="/assets/img/1400/{{ img.name }}">
-											<img class="gallery-item rounded" src="/assets/img/300/{{ img.name }}" alt="{{ img.alt }}">
+										<a href="{{ site.baseurl }}/assets/img/1400/{{ img.name }}">
+											<img class="gallery-item rounded" src="{{ site.baseurl }}/assets/img/300/{{ img.name }}" alt="{{ img.alt }}">
 										</a>
 									</div>
 								{% endfor %}
