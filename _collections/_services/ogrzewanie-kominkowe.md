@@ -1,4 +1,4 @@
 ---
 title: Ogrzewanie kominkowe
-description: Instalacja płaszcza wodnego do kominka lub pieca.
+description_short: Podłączanie instalacji wodnej do kominka z płaszczem wodnym.
 ---

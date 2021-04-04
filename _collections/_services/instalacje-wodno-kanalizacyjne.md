@@ -1,6 +1,6 @@
 ---
 title: Instalacje wodno-kanalizacyjne
-description: Rury doprowadzające i odprowadzające wodę wewnątrz oraz na zewnątrz budynku.
+description_short: Rury doprowadzające i odprowadzające wodę wewnątrz oraz na zewnątrz budynku.
 gallery:
   - alt:
     name: DSC03556.jpg

@@ -17,19 +17,11 @@ contact:
     title: E-mail
     button: Kopiuj
   opening:
-    id: godziny-pracy
-    title: Godziny pracy
+    id: godziny-kontaktu
+    title: Godziny kontaktu
     hours:
-      - when: "pn. - sb."
-        what: "8:00 - 16:00"
-      - when: "nd. i święta"
+      - when: "pn. - pt."
+        what: "8:00 - 19:00"
+      - when: "sb. i nd."
         what: "nieczynne"
-
-faq:
-  id: czesto-zadawane-pytania
-  title: Często zadawane pytania
-  questions:
-    - id: czy-pracujemy-na-czesciach-dostarczonych-przez-klienta
-      name: Czy pracujemy na częściach dostarczonych przez klienta?
-      answer: Tak, pracujemy na częściach dostarczonych przez klienta. W razie potrzeby zaopatrzymy się w brakujące elementy.
 ---
