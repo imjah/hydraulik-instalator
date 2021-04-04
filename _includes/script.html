@@ -8,7 +8,7 @@
 	const is_navbar_dark = navbar.classList.contains('navbar-dark');
 
 	window.addEventListener('scroll', () => {
-		if (window.scrollY == 0 && navbar_toggle.classList.contains('collapsed')) {
+		if (window.scrollY < 2 && navbar_toggle.classList.contains('collapsed')) {
 			if (is_navbar_dark) {
 				navbar.classList.add('navbar-dark');
 				navbar.classList.remove('navbar-light');
@@ -28,7 +28,7 @@
 	});
 
 	navbar_toggle.addEventListener('click', () => {
-		if (window.scrollY == 0) {
+		if (window.scrollY < 2) {
 			if (is_navbar_dark) {
 				navbar.classList.toggle('navbar-dark');
 				navbar.classList.toggle('navbar-light');
