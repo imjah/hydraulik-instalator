@@ -1,5 +1,6 @@
 ---
 ---
 $baseurl: "{{ site.baseurl }}";
+$primary: {{ site.data.color.primary }};
 
 @import "main";
