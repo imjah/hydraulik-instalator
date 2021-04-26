@@ -2,87 +2,86 @@
 <html dir="{{ site.data.html.dir }}" lang="{{ site.data.html.lang }}">
 	{% include head.html %}
 	<body class="d-flex flex-column min-vh-100">
-		<header class="bg-blue-500">
-			{% assign navbar_dark  = true %}
-			{% assign navbar_space = true %}
-			{% include navbar.html %}
-		</header>
-		<main class="flex-fill bg-blue-500 text-white">
-			<!-- Contact -->
-			<section class="container mb-5">
-				<div class="text-center py-3">
-					<h1 id="{{ page.contact.id }}">
-						<a href="#{{ page.contact.id }}">{{ page.contact.title }}</a>
-					</h1>
-					<p>{{ page.contact.subtitle }}</p>
-				</div>
-				<div class="row align-items-xl-center">
-					<!-- Opening  -->
-					<div class="col-12 p-0 col-xl-4 order-xl-2">
-						<div class="bg-primary rounded shadow p-4 m-2 p-xl-5">
-							<h5 id="{{ page.contact.opening.id }}" class="mb-3">
-								<a href="#{{ page.contact.opening.id }}">{{ page.contact.opening.title }}</a>
-							</h5>
-							{% for h in page.contact.opening.hours %}
-								<div class="d-flex justify-content-between">
-									<p>{{ h.when }}</p>
-									<p>{{ h.what }}</p>
-								</div>
-							{% endfor %}
-						</div>
+		<div class="flex-fill bg-blue-500 pattern-falling-pipes">
+			<header>
+				{% assign navbar_dark  = true %}
+				{% assign navbar_space = true %}
+				{% include navbar.html %}
+			</header>
+			<main class="text-white">
+				<!-- Contact -->
+				<section class="container mb-5">
+					<div class="text-center py-3">
+						<h1 id="{{ page.contact.id }}">
+							<a href="#{{ page.contact.id }}">{{ page.contact.title }}</a>
+						</h1>
+						<p>{{ page.contact.subtitle }}</p>
 					</div>
-					<!-- Telephone -->
-					<div class="col-12 p-0 col-md-5 col-lg-6 col-xl-4 order-xl-1">
-						<div class="bg-white text-dark rounded shadow p-4 m-2 me-xxl-4">
-							<div class="mb-4">
+					<div class="row align-items-xl-center">
+						<!-- Opening -->
+						<div class="col-12 p-0 col-xl-4 order-xl-2">
+							<div class="bg-primary rounded p-4 m-2 p-xl-5">
+								<h5 id="{{ page.contact.opening.id }}" class="mb-3">
+									<a href="#{{ page.contact.opening.id }}">{{ page.contact.opening.title }}</a>
+								</h5>
+								{% for h in page.contact.opening.hours %}
+									<div class="d-flex justify-content-between">
+										<p>{{ h.when }}</p>
+										<p>{{ h.what }}</p>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+						<!-- Telephone -->
+						<div class="col-12 p-0 col-md-5 col-lg-6 col-xl-4 order-xl-1">
+							<div class="bg-white text-dark rounded p-4 m-2 me-xxl-4">
 								<h5 id="{{ page.contact.phone.id }}">
 									<a href="#{{ page.contact.phone.id }}">{{ page.contact.phone.title }}</a>
 								</h5>
-								<p>
-									<i class="bi bi-phone me-1"></i><span id="copy-phone">{{ site.data.contact.phone | replace: "-", " "}}</span>
-								</p>
-							</div>
-							<div class="d-grid">
-								<button class="btn btn-primary text-white" type="button" data-copy-target="#copy-phone">{{ page.contact.phone.button }}</button>
+								<div class="d-flex align-items-center mb-4">
+									<svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+										<path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+									</svg>
+									<span id="copy-phone">{{ site.data.contact.phone | replace: "-", " "}}</span>
+								</div>
+								<div class="row">
+									<div class="col d-grid">
+										<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary text-white">{{ page.contact.phone.button.open }}</a>
+									</div>
+									<div class="col d-grid">
+										<button class="btn btn-outline-primary" type="button" data-copy-target="#copy-phone" data-copy-replace="Skopiowane">{{ page.contact.phone.button.copy }}</button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- Email -->
-					<div class="col-12 p-0 col-md-7 col-lg-6 col-xl-4 order-xl-3">
-						<div class="bg-white text-dark rounded shadow p-4 m-2 ms-xxl-4">
-							<div class="mb-4">
+						<!-- Email -->
+						<div class="col-12 p-0 col-md-7 col-lg-6 col-xl-4 order-xl-3">
+							<div class="bg-white text-dark rounded p-4 m-2 ms-xxl-4">
 								<h5 id="{{ page.contact.email.id }}">
 									<a href="#{{ page.contact.email.id }}">{{ page.contact.email.title }}</a>
 								</h5>
-								<p>
-									<i class="bi bi-envelope me-2"></i><span id="copy-email">{{ site.data.contact.email }}</span>
-								</p>
-							</div>
-							<div class="d-grid">
-								<button class="btn btn-primary text-white" type="button" data-copy-target="#copy-email">{{ page.contact.email.button }}</button>
+								<div class="d-flex align-items-center mb-4">
+									<svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+										<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+									</svg>
+									<span id="copy-email">{{ site.data.contact.email }}</span>
+								</div>
+								<div class="row">
+									<div class="col d-grid">
+										<a href="mailto:{{ site.data.contact.email }}" class="btn btn-primary text-white">{{ page.contact.email.button.open }}</a>
+									</div>
+									<div class="col d-grid">
+										<button class="btn btn-outline-primary" type="button" data-copy-target="#copy-email" data-copy-replace="Skopiowane">{{ page.contact.email.button.copy }}</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-		</main>
+				</section>
+			</main>
+		</div>
 		{% include footer.html %}
 		{% include script.html %}
-		<script type="text/javascript">
-			// Copy buttons
-			const copy_buttons = document.querySelectorAll('[data-copy-target]');
-
-			for (let i = 0; i < copy_buttons.length; i++) {
-				copy_buttons[i].addEventListener('click', function() {
-					text = document.querySelector(this.dataset.copyTarget).textContent;
-
-					navigator.clipboard.writeText(text).then(() => {
-						this.innerHTML = 'Skopiowane';
-					}, (e) => {
-						console.log(e);
-					});
-				});
-			}
-		</script>
 	</body>
 </html>

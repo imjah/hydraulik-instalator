@@ -1,0 +1,12 @@
+.navbar-brand {
+	img {
+		height: 75px;
+	}
+
+	&.upscale {
+		@media (min-width: map-get($grid-breakpoints, "sm")) {
+			$scale_size: 50%;
+			transform: translate($scale_size / 2, $scale_size / 2) scale(100% + $scale_size);
+		}
+	}
+}

@@ -11,11 +11,15 @@ contact:
   phone:
     id: telefon
     title: Telefon
-    button: Kopiuj
+    button:
+      copy: Kopiuj
+      open: Zadzwoń
   email:
     id: e-mail
     title: E-mail
-    button: Kopiuj
+    button:
+      copy: Kopiuj
+      open: Napisz
   opening:
     id: godziny-kontaktu
     title: Godziny kontaktu

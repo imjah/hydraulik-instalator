@@ -1,0 +1,17 @@
+.max-vh-100 {
+	max-height: 100vh;
+}
+
+.me-last-0:last-child {
+	margin-right: 0 !important;
+}
+
+.bg {
+	&-blue-500 {
+		background-color: #2196f3;
+	}
+
+	&-blue-700 {
+		background-color: #1976d2;
+	}
+}

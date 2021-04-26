@@ -1,18 +1,18 @@
-<nav class="navbar {% if navbar_dark %}navbar-dark{% else %}navbar-light{% endif %} navbar-expand-sm fixed-top animate" id="navbar">
+<nav id="navbar" class="navbar {% if navbar_dark %}navbar-dark{% else %}navbar-light{% endif %} navbar-expand-sm fixed-top animate">
 	<div class="container-fluid px-xl-5">
 		<!-- Logotype -->
 		{% assign homepage = site.data.navigation.navbar | where: 'id', 1 %}
-		<a class="navbar-brand animate upscale" id="navbar-brand" href="{{ site.baseurl }}{{ homepage[0].href }}">
+		<a id="navbar-brand" class="navbar-brand animate upscale" href="{{ site.baseurl }}{{ homepage[0].href }}">
 			<img src="{{ site.baseurl }}/assets/img/logotypes/{{ site.data.brand.logo }}" alt="{{ site.data.brand.name }}">
 		</a>
 
 		<!-- Navigation toggle -->
-		<button class="navbar-toggler collapsed" id="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
+		<button id="navbar-toggler" class="navbar-toggler" type="button" data-collapse-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
 		<!-- Navigation -->
-		<div class="navbar-collapse collapse" id="navbar-menu">
+		<div id="main-menu" class="navbar-collapse collapse">
 			<ul class="navbar-nav ms-auto my-3">
 				{% for link in site.data.navigation.navbar %}
 					<li class="nav-item mx-2 me-last-0">
