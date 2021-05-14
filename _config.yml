@@ -1,9 +1,9 @@
-collections_dir : _collections
-
 collections:
   services:
     output: true
     permalink: /uslugi/:path/
+
+collections_dir : _collections
 
 defaults:
   - scope:
@@ -14,7 +14,3 @@ defaults:
 
 sass:
   style: compressed
-
-plugins:
-  - octopress-minify-html
-  - jekyll-pages-directory
