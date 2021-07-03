@@ -24,7 +24,10 @@ document.querySelectorAll('[data-copy-target]').forEach(button => {
 
 document.querySelectorAll('[data-collapse-target]').forEach(button => {
 	button.addEventListener('click', () => {
-		button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+		button.setAttribute(
+            'aria-expanded',
+            button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
 
 		document.querySelectorAll(button.dataset.collapseTarget).forEach(target => {
 			target.classList.add('collapsing');

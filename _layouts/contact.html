@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html dir="{{ site.data.html.dir }}" lang="{{ site.data.html.lang }}">
+<html lang="{{ page.lang }}">
 	{% include head.html %}
 	<body class="d-flex flex-column min-vh-100">
 		<div class="flex-fill bg-blue-500 pattern-falling-pipes">
 			<header>
-				{% assign navbar_dark  = true %}
-				{% assign navbar_space = true %}
+				{% assign navbar_dark = true %}
 				{% include navbar.html %}
 			</header>
 			<main class="text-white">
@@ -47,7 +46,7 @@
 								</div>
 								<div class="row">
 									<div class="col d-grid">
-										<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary text-white">{{ page.contact.phone.button.open }}</a>
+										<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">{{ page.contact.phone.button.open }}</a>
 									</div>
 									<div class="col d-grid">
 										<button class="btn btn-outline-primary" type="button" data-copy-target="#copy-phone" data-copy-replace="Skopiowane">{{ page.contact.phone.button.copy }}</button>
@@ -69,7 +68,7 @@
 								</div>
 								<div class="row">
 									<div class="col d-grid">
-										<a href="mailto:{{ site.data.contact.email }}" class="btn btn-primary text-white">{{ page.contact.email.button.open }}</a>
+										<a href="mailto:{{ site.data.contact.email }}" class="btn btn-primary">{{ page.contact.email.button.open }}</a>
 									</div>
 									<div class="col d-grid">
 										<button class="btn btn-outline-primary" type="button" data-copy-target="#copy-email" data-copy-replace="Skopiowane">{{ page.contact.email.button.copy }}</button>

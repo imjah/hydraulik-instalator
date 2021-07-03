@@ -1,6 +1,7 @@
 ---
 layout: contact
 
+lang: pl
 title: Kontakt
 description:
 

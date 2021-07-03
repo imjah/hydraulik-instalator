@@ -8,10 +8,12 @@
 
 .bg {
 	&-blue-500 {
+		color: $white;
 		background-color: #2196f3;
 	}
 
 	&-blue-700 {
+		color: $white;
 		background-color: #1976d2;
 	}
 }
