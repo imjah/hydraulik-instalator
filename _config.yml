@@ -12,5 +12,6 @@ defaults:
     values:
       layout: "service"
 
-sass:
-  style: compressed
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
