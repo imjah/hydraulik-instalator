@@ -1,4 +1,4 @@
 ---
 title: Pompy ciepła
-description_short: Montaż powietrznych pomp ciepła.
+brief: Montaż powietrznych pomp ciepła.
 ---

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 	{% include head.html %}
-	<body class="d-flex flex-column min-vh-100">
-		<div class="flex-fill bg-blue-500 pattern-falling-pipes">
+	<body class="d-flex flex-column min-vh-100 bg-blue-500">
+		<div class="flex-fill pattern-falling-pipes">
 			<header>
-				{% assign navbar_dark = true %}
+				{% assign navbar_space = true %}
 				{% include navbar.html %}
 			</header>
 			<main class="text-white">
@@ -37,11 +37,8 @@
 								<h5 id="{{ page.contact.phone.id }}">
 									<a href="#{{ page.contact.phone.id }}">{{ page.contact.phone.title }}</a>
 								</h5>
-								<div class="d-flex align-items-center mb-4">
-									<svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-										<path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-										<path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-									</svg>
+								<div class="mb-4">
+									<i class="icon-phone-black"></i>
 									<span id="copy-phone">{{ site.data.contact.phone | replace: "-", " "}}</span>
 								</div>
 								<div class="row">
@@ -60,10 +57,8 @@
 								<h5 id="{{ page.contact.email.id }}">
 									<a href="#{{ page.contact.email.id }}">{{ page.contact.email.title }}</a>
 								</h5>
-								<div class="d-flex align-items-center mb-4">
-									<svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-										<path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-									</svg>
+								<div class="mb-4">
+									<i class="icon-envelope-black"></i>
 									<span id="copy-email">{{ site.data.contact.email }}</span>
 								</div>
 								<div class="row">
