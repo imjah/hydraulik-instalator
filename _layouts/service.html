@@ -2,61 +2,53 @@
 <html lang="{{ page.lang }}">
 	{% include head.html %}
 	<body class="d-flex flex-column min-vh-100">
-		<header class="bg-blue-500 text-white">
-			<!-- Navbar -->
-			{% assign navbar_dark = true %}
+		<header class="{{ page.pattern }}">
+			{% assign navbar_light = true %}
+			{% assign navbar_space = true %}
 			{% include navbar.html %}
-
-			<!-- Title section -->
-			<div class="container py-3">
-				<aside class="mb-3">
-					{% assign services_link = site.data.navigation.navbar | where: 'id', 2 %}
-					<a href="{{ site.baseurl }}{{ services_link[0].href }}#{{ page.title | slugify }}">
-						<i class="bi bi-arrow-left-circle text-primary"></i>
-						Usługi
+			<!-- Title -->
+			{% assign images_shift = "5rem" %}
+			<section class="container" style="padding-bottom: {{ images_shift }}">
+				{% assign services_link = site.data.navigation.navbar | where: 'id', 2 %}
+				<aside class="mb-4 mt-sm-4">
+					<a class="btn btn-primary" href="{{ site.baseurl }}{{ services_link[0].href }}#{{ page.title | slugify }}">
+						<i class="icon-arrow-left-white me-1"></i>Usługi
 					</a>
 				</aside>
-				<span class="text-center">
-					<h1>
-						<a href=".">{{ page.title }}</a>
-					</h1>
-					<p>{{ page.description_short }}</p>
-				</span>
-			</div>
+				<h1>
+					<a href=".">{{ page.title }}</a>
+				</h1>
+				<p class="lead">{{ page.brief }}</p>
+			</section>
 		</header>
-		<main class="flex-fill bg-blue-500 text-white">
-			<div class="container">
-				{{ content }}
-				<!-- Gallery -->
-				{% if page.gallery %}
-					<hr>
-					<section class="mb-5">
-						<h3 id="projekty" class="text-center mt-5 mb-4">
-							<a href="#projekty">Wykonane zlecenia</a>
-						</h3>
-						<div class="d-flex justify-content-center flex-wrap gap-2">
-							{% for group in page.gallery %}
-								<div class="bg-primary rounded p-2">
-									<div class="gallery-item d-flex justify-content-center align-items-center position-relative">
-										<h5 id="{{ group.id }}" class="mb-0">
-											<a class="stretched-link" href="#{{ group.id }}">{{ group.title }}</a>
-										</h5>
-									</div>
-								</div>
-								{% for img in group.images %}
-									<div class="bg-light rounded p-2">
-										<a href="{{ site.baseurl }}/assets/img/1400/{{ img.name }}">
-											<img class="gallery-item rounded" src="{{ site.baseurl }}/assets/img/300/{{ img.name }}" alt="{{ img.alt }}">
-										</a>
-									</div>
-								{% endfor %}
-							{% endfor %}
+		<main class="flex-fill bg-blue-500">
+			<!-- Images -->
+			<section class="container pb-5" style="margin-top: -{{ images_shift }}">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 gallery">
+					{% capture dir %}{{ site.baseurl }}/assets/img{% endcapture %}
+					{% for image in page.images %}
+						<div class="col">
+							<a href="{{ dir }}/1080p/{{ image.name }}"
+							   data-at-640="{{ dir }}/360p/{{ image.name }}"
+							   data-at-854="{{ dir }}/480p/{{ image.name }}"
+							   data-at-1280="{{ dir }}/720p/{{ image.name }}"
+							   data-at-1920="{{ dir }}/1080p/{{ image.name }}">
+								<img class="img-fluid rounded" src="{{ dir }}/360p/{{ image.name }}" alt="{{ image.alt }}">
+							</a>
 						</div>
-					</section>
-				{% endif %}
-			</div>
+					{% endfor %}
+				</div>
+			</section>
 		</main>
 		{% include footer.html %}
 		{% include script.html %}
+		<script src="{{ site.baseurl }}/assets/js/baguettebox.js" async></script>
+		<script>
+			window.addEventListener('load', function() {
+				baguetteBox.run('.gallery', {
+					noScrollbars: true
+				});
+			});
+		</script>
 	</body>
 </html>
