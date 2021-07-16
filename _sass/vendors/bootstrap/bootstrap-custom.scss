@@ -6,6 +6,7 @@ $link-decoration: none;
 $headings-font-weight: bold;
 $navbar-brand-padding-y: 0;
 $navbar-brand-margin-end: 0;
+$card-color: #000000;
 
 // Configuration
 @import "functions";
@@ -28,7 +29,7 @@ $navbar-brand-margin-end: 0;
 // @import "button-group";
 @import "nav";
 @import "navbar";
-// @import "card";
+@import "card";
 // @import "accordion";
 // @import "breadcrumb";
 // @import "pagination";

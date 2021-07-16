@@ -1,0 +1,17 @@
+.card-service {
+	scroll-margin-block: 6em;
+
+	.card-body {
+		@media (min-width: map-get($grid-breakpoints, "md")) {
+			height: 12rem;
+		}
+
+		@media (min-width: map-get($grid-breakpoints, "lg")) {
+			height: 14rem;
+		}
+
+		@media (min-width: map-get($grid-breakpoints, "xl")) {
+			height: 12rem;
+		}
+	}
+}

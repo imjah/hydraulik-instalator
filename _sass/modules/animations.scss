@@ -1,0 +1,31 @@
+@keyframes shake {
+	$shift: .25rem;
+
+	0% {
+		transform: translateX(0rem);
+	}
+
+	20% {
+		transform: translateX(-$shift);
+	}
+
+	40% {
+		transform: translateX($shift);
+	}
+
+	60% {
+		transform: translateX(-$shift);
+	}
+
+	80% {
+		transform: translateX($shift);
+	}
+
+	100% {
+		transform: translateX(0rem);
+	}
+}
+
+.shake {
+	animation: shake 0.382s .618s;
+}

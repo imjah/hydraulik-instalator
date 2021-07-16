@@ -94,3 +94,24 @@ document.querySelectorAll('[data-collapse-target]').forEach(button => {
 	 	}
 	});
 })();
+
+/**
+ * -----------------------------------------------------------------------------
+ * Shake
+ * -----------------------------------------------------------------------------
+ * Shakes the item marked in the link.
+ */
+
+window.addEventListener('load', () => {
+    const item = document.getElementById(
+        window.location.hash.replace('#', '') || undefined
+    );
+
+    if (item) {
+        item.addEventListener('animationend', function() {
+            this.classList.remove('shake');
+        });
+
+        item.classList.add('shake');
+    }
+});

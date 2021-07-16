@@ -1,29 +1,57 @@
 <html lang="{{ page.lang }}">
 	{% include head.html %}
 	<body class="d-flex flex-column min-vh-100">
-		<header class="bg-blue-500">
+		<header class="pattern-tools">
 			<!-- Navbar -->
+			{% assign navbar_light = true %}
 			{% assign navbar_space = true %}
 			{% include navbar.html %}
+			<!-- Title -->
+			{% assign images_shift = "5rem" %}
+			<section class="container mt-3" style="padding-bottom: {{ images_shift }}">
+				<h1>Oferta firmy</h1>
+				<p class="lead">Świadczymy usługi instalatorskie według poniższej listy.</p>
+			</section>
 		</header>
-		<main class="flex-fill bg-blue-500 text-white">
-			<div class="container">
-				<div class="container">
-					<div class="row">
-						{% for service in site.services %}
-							<div class="col-12 col-md-6">
-								<article class="text-center text-md-start mb-5 mx-3">
-									<h4>
-										<a id="{{ service.title | slugify}}" class="link-light" href="{{ site.baseurl }}{{ service.url }}">{{ service.title }}</a>
-									</h4>
-									<p>{{ service.brief }}</p>
-								</article>
+		<main class="flex-fill bg-blue-500">
+			<!-- Cards -->
+			<section class="container pb-5" style="margin-top: -{{ images_shift }}">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+					{% for service in site.services %}
+					<div class="col">
+						{% if service.images %}
+							{% capture url %}{{ site.baseurl }}{{ service.url }}{% endcapture %}
+						{% else %}
+							{% assign url = nil %}
+						{% endif %}
+						<article {% if url %}id="{{ service.hash }}"{% endif %} class="card card-service">
+							{% if url %}
+								<a href="{{ url }}">
+							{% endif %}
+									<img class="card-img-top" src="{{ site.baseurl }}/assets/img/360p/{{ service.image.name }}" alt="{{ service.image.alt }}">
+							{% if url %}
+								</a>
+							{% endif %}
+							<div class="card-body d-flex flex-column {{ service.pattern }}">
+								<h5 class="card-title">
+									{% if url %}
+										<a href="{{ url }}">
+									{% endif %}
+											{{ service.title }}
+									{% if url %}
+										</a>
+									{% endif %}
+								</h5>
+								<p class="card-text flex-fill">{{ service.brief }}</p>
+								<div>
+									<a class="btn btn-primary{% if url == nil %} disabled{% assign url = "#" %}{% endif %}" href="{{ url }}">Galeria zdjęć</a>
+								</div>
 							</div>
-						{% endfor %}
+						</article>
 					</div>
+					{% endfor %}
 				</div>
-			</div>
-			{{ content }}
+			</section>
 		</main>
 		{% include footer.html %}
 		{% include script.html %}
