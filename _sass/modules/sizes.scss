@@ -1,0 +1,45 @@
+@function get-height($width, $ratio) {
+	@return #{$width * nth($ratio, 2) / nth($ratio, 1)}
+}
+
+.size {
+	&-infographic {
+		max-width: 100%;
+
+		$ratio: 6081, 6935;
+		$widths: (
+			'sm': 420,
+			'md': 360,
+			'lg': 520,
+			'xl': 640,
+			'xxl': 760
+		);
+
+		@each $breakpoint, $width in $widths {
+			@media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+				width: #{$width}px;
+				height: #{get-height($width, $ratio)}px;
+			}
+		}
+	}
+
+	&-service-thumbnail {
+		max-width: 100%;
+
+		$ratio: 16, 9;
+		$widths: (
+			'sm': 514,
+			'md': 338,
+			'lg': 299,
+			'xl': 359,
+			'xxl': 419
+		);
+
+		@each $breakpoint, $width in $widths {
+			@media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+				width: #{$width}px;
+				height: #{get-height($width, $ratio)}px;
+			}
+		}
+	}
+}
