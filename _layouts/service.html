@@ -18,7 +18,7 @@
 				<h1>
 					<a href=".">{{ page.title }}</a>
 				</h1>
-				<p class="lead">{{ page.brief }}</p>
+				<p class="lead">{{ page.description }}</p>
 			</section>
 		</header>
 		<main class="flex-fill bg-blue-500">
@@ -33,7 +33,7 @@
 							   data-at-854="{{ dir }}/480p/{{ image.name }}"
 							   data-at-1280="{{ dir }}/720p/{{ image.name }}"
 							   data-at-1920="{{ dir }}/1080p/{{ image.name }}">
-								<img class="img-fluid rounded" src="{{ dir }}/360p/{{ image.name }}" alt="{{ image.alt }}">
+								<img class="size-service-thumbnail rounded" src="{{ dir }}/360p/{{ image.name }}" alt="{{ image.alt }}" loading="lazy">
 							</a>
 						</div>
 					{% endfor %}
