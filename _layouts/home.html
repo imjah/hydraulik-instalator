@@ -8,11 +8,11 @@
 			<!-- infographic -->
 			<div class="container py-5 mt-5">
 				<div class="row">
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 px-5">
 						<picture>
 							<source media="(max-width: {{ site.data.breakpoint.sm }})" srcset="{{ site.baseurl }}/assets/img/stock/{{ page.sections.infographic.img.name }}">
 							<source media="(max-width: {{ site.data.breakpoint.lg }})" srcset="{{ site.baseurl }}/assets/img/stock/{{ page.sections.infographic.img.name }}">
-							<img class="img-fluid px-5" src="{{ site.baseurl }}/assets/img/stock/{{ page.sections.infographic.img.name }}" alt="{{ page.sections.infographic.img.alt }}">
+							<img class="size-infographic" src="{{ site.baseurl }}/assets/img/stock/{{ page.sections.infographic.img.name }}" alt="{{ page.sections.infographic.img.alt }}" loading="lazy">
 						</picture>
 					</div>
 					<div class="col-12 col-md-4 align-self-md-center">
@@ -36,7 +36,13 @@
 						<div class="col-12 col-md-6 col-lg-4">
 							<article class="text-center text-md-start mb-5 mx-3">
 								<h4>
-									<a href="{{ site.baseurl }}{{ service.url }}">{{ service.title }}</a>
+									{% if service.images %}
+										<a href="{{ site.baseurl }}{{ service.url }}">
+									{% endif %}
+											{{ service.title }}
+									{% if service.images %}
+										</a>
+									{% endif %}
 								</h4>
 								<p>{{ service.brief }}</p>
 							</article>
