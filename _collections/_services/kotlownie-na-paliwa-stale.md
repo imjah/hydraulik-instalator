@@ -6,33 +6,34 @@ description: Instalacja kotłów zasilanych ekogroszkiem lub peletem z podajniki
 keywords: kotły co, kotły na ekogroszek, kotły na pelet, kotły z podajnikiem automatycznym, kotły z pompą ciepła, kotły z zasobnikiem, heiztechnik, galmet
 image:
   name: e555.jpg
+  alt: Kocioł na paliwo stałe Heiztechnik
 images:
   - name: 5518.jpg
-    alt:
+    alt: Kocioł na paliwo stałe Heiztechnik, pompa ciepła Galmet
   - name: 4bbd.jpg
-    alt:
+    alt: Instalacja pompy ciepła od kotłowni
   - name: 9eb6.jpg
-    alt:
+    alt: Instalacja pompy ciepła od zewnątrz
   - name: a139.jpg
-    alt:
+    alt: Instalacja kotłowni na paliwo stałe
   - name: fef5.jpg
-    alt:
+    alt: Instalacja kotłowni na paliwo stałe
   - name: eebb.jpg
-    alt:
+    alt: Zbiornik wyrównawczy
   - name: b49f.jpg
-    alt:
+    alt: Kocioł na paliwo stałe Heiztechnik
   - name: 29bf.jpg
-    alt:
+    alt: Pompa ciepła Galmet
   - name: bd96.jpg
-    alt:
+    alt: Kocioł na paliwo stałe Heiztechnik z zasobnikiem
   - name: 1200.jpg
-    alt:
+    alt: Zbiornik wyrównawczy
   - name: 9582.jpg
-    alt:
+    alt: Kocioł na paliwo stałe Heiztechnik
   - name: fb8e.jpg
-    alt:
+    alt: Zbiornik wyrównawczy
   - name: e555.jpg
-    alt:
+    alt: Kocioł na paliwo stałe Heiztechnik
   - name: d758.jpg
-    alt:
+    alt: Zasobnik kotła na paliwo stałe
 ---

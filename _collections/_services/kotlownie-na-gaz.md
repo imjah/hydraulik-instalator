@@ -6,13 +6,14 @@ description: Instalacja tradycyjnych lub kondensacyjnych kotłów gazowych, jedn
 keywords: kotły gazowe, kotły kondensacyjne, kotły jednofunkcyjne, kotły dwufunkcyjne, kotły z zasobnikiem, vaillant, beretta, junkers
 image:
   name: 7cdf.jpg
+  alt: Kocioł gazowy Vaillant
 images:
   - name: 7cdf.jpg
-    alt:
+    alt: Kocioł gazowy Vaillant
   - name: 66ea.jpg
-    alt:
+    alt: Instalacja kotła gazowego
   - name: e9a5.jpg
-    alt:
+    alt: Zasobnik kotła gazowego
   - name: 9ce4.jpg
-    alt:
+    alt: Zasobnik kotła gazowego
 ---

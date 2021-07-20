@@ -6,24 +6,25 @@ description: Instalacja rur doprowadzających i odprowadzających wodę wewnątr
 keywords: krany kuchenne, krany łazienkowe, krany ogrodowe, ścieki, geberyty, muszle klozetowe, wc
 image:
   name: db3c.jpg
+  alt: Gaberyt, przyłącze wodne prysznicowe
 images:
   - name: 4540.jpg
-    alt:
+    alt: Przyłącze wodne umywalkowe z odpływem
   - name: 13d8.jpg
-    alt:
+    alt: Przyłącze wodne umywalkowe z odpływem
   - name: 45b0.jpg
-    alt:
+    alt: Sieć sanitarna
   - name: c77e.jpg
-    alt:
+    alt: Gaberyt
   - name: 2bb0.jpg
-    alt:
+    alt: Gaberyt, przyłącze wodne prysznicowe
   - name: db3c.jpg
-    alt:
+    alt: Gaberyt, przyłącze wodne prysznicowe
   - name: 6b73.jpg
-    alt:
+    alt: Przyłącze wodne ogrodowe
   - name: 7670.jpg
-    alt:
+    alt: Kran ogrodowy
   - name: fa05.jpg
-    alt:
+    alt: Przyłącze wodne ogrodowe
 pattern: pattern-water-sewage
 ---

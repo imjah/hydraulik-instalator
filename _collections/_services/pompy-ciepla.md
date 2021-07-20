@@ -4,4 +4,5 @@ title: Pompy ciepła
 brief: Powietrzne pompy ciepła.
 image:
   name: 6c5e.jpg
+  alt: Powietrzna pompa ciepła
 ---

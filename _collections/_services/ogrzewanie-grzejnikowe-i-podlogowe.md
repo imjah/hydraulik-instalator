@@ -6,23 +6,24 @@ description: Instalacja ogrzewania grzejnikowego i podłogowego z materiałów A
 keywords: ogrzewanie, grzejniki, grzejniki wodne, grzejniki stalowe, grzejniki aluminiowe, podłogówka, podłgówka wodna, podłogówka z tworzywa sztucznego, buderus, diamond
 image:
   name: 34ee.jpg
+  alt: Grzejniki stalowe Buderus
 images:
   - name: 7c20.jpg
-    alt:
+    alt: Ogrzewanie podłogowe, przewody z tworzywa sztucznego
   - name: 293b.jpg
-    alt:
+    alt: Ogrzewanie podłogowe, przewody z tworzywa sztucznego
   - name: e9c7.jpg
-    alt:
+    alt: Ogrzewanie podłogowe, przewody z tworzywa sztucznego
   - name: 3285.jpg
-    alt:
+    alt: Przewody wychodzące z układu mieszającyego ogrzewania podłogowego
   - name: 528c.jpg
-    alt:
+    alt: Układ mieszający ogrzewania podłogowego Altech
   - name: 34ee.jpg
-    alt:
+    alt: Grzejniki stalowe Buderus
   - name: 63bf.jpg
-    alt:
+    alt: Grzejnik stalowy Diamond
   - name: ff44.jpg
-    alt:
+    alt: Grzejnik łazienkowy
   - name: 0a78.jpg
-    alt:
+    alt: Grzejnik łazienkowy
 ---
