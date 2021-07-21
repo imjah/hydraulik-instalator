@@ -26,5 +26,4 @@ images:
     alt: Kran ogrodowy
   - name: fa05.jpg
     alt: Przyłącze wodne ogrodowe
-pattern: pattern-water-sewage
 ---
