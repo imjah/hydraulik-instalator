@@ -60,19 +60,7 @@ document.querySelectorAll('[data-collapse-target]').forEach(button => {
 	const navbar_toggler = document.getElementById('navbar-toggler');
 	const is_navbar_dark = navbar.classList.contains('navbar-dark');
 
-	navbar_toggler.addEventListener('click', () => {
-		if (window.scrollY == 0) {
-			navbar.classList.toggle('bg-light');
-			navbar.classList.toggle('shadow-sm');
-
-			if (is_navbar_dark) {
-				navbar.classList.toggle('navbar-dark');
-				navbar.classList.toggle('navbar-light');
-			}
-		}
-	});
-
-	window.addEventListener('scroll', () => {
+	const style = () => {
 		if (window.scrollY == 0 && navbar_toggler.attributes['aria-expanded'].value == 'false') {
 			navbar.classList.remove('bg-light', 'shadow-sm');
 
@@ -92,7 +80,11 @@ document.querySelectorAll('[data-collapse-target]').forEach(button => {
 
 	 		navbar_brand.classList.remove('upscale');
 	 	}
-	});
+	};
+
+	style();
+	window.addEventListener('scroll', style);
+	navbar_toggler.addEventListener('click', style);
 })();
 
 /**
