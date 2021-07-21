@@ -6,13 +6,13 @@
 	&-infographic {
 		max-width: 100%;
 
-		$ratio: 6081, 6935;
+		$ratio: 50, 57;
 		$widths: (
-			'sm': 420,
-			'md': 360,
-			'lg': 520,
-			'xl': 640,
-			'xxl': 760
+			'sm': 444,
+			'md': 384,
+			'lg': 544,
+			'xl': 664,
+			'xxl': 784
 		);
 
 		@each $breakpoint, $width in $widths {
