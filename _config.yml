@@ -11,7 +11,3 @@ defaults:
       type: "services"
     values:
       layout: "service"
-
-jekyll-minifier:
-  uglifier_args:
-    harmony: true
