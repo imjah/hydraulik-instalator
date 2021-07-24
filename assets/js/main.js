@@ -4,24 +4,26 @@ window.addEventListener('load', () => {
  * Collapse
  * -----------------------------------------------------------------------------
  * Bootstrap collapse component replacement. Limited usage.
- * Collapses target element on button click with transition animation.
+ * Collapses target elements on button click with transition animation.
  */
 
 document.querySelectorAll('[data-collapse-target]').forEach(button => {
+	let targets = document.querySelectorAll(button.dataset.collapseTarget);
+
 	button.addEventListener('click', () => {
 		button.setAttribute(
 			'aria-expanded',
 			button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
 		);
 
-		document.querySelectorAll(button.dataset.collapseTarget).forEach(target => {
+		targets.forEach(target => {
 			target.classList.add('collapsing');
 			target.classList.remove('collapse', 'show');
-			target.style.height = target.clientHeight ? '' : target.scrollHeight + 'px';
+			target.style.height = target.clientHeight ? '' : `${target.scrollHeight}px`;
 		});
 	});
 
-	document.querySelectorAll(button.dataset.collapseTarget).forEach(target => {
+	targets.forEach(target => {
 		target.addEventListener('transitionend', () => {
 			target.classList.add('collapse');
 			target.classList.remove('collapsing');
