@@ -40,16 +40,15 @@
 								<a href="#{{ id }}">Telefon</a>
 							</h5>
 							<div class="mb-4 text-ellipsis">
-								<i class="icon-phone-black"></i>
 								{% assign copy-id = "copy-phone" %}
-								<span id="{{ copy-id }}">{{ site.data.contact.phone | replace: "-", " "}}</span>
+								<i class="icon-phone-black me-1"></i><span id="{{ copy-id }}">{{ site.data.contact.phone | replace: "-", " "}}</span>
 							</div>
 							<div class="row">
 								<div class="col d-grid">
 									<a class="btn btn-primary" href="tel:{{ site.data.contact.phone }}">Zadzwoń</a>
 								</div>
 								<div class="col d-grid">
-									<button class="btn btn-outline-primary" type="button" data-copy-target="#{{ copy-id }}" data-copy-replace="Skopiowane">Kopiuj</button>
+									<button class="btn btn-outline-primary" type="button" data-copy-target="{{ copy-id }}" data-copy-replace="Skopiowane">Kopiuj</button>
 								</div>
 							</div>
 						</div>
@@ -62,16 +61,15 @@
 								<a href="#{{ id }}">E-mail</a>
 							</h5>
 							<div class="mb-4 text-ellipsis">
-								<i class="icon-envelope-black"></i>
 								{% assign copy-id = "copy-email" %}
-								<span id="{{ copy-id }}">{{ site.data.contact.email }}</span>
+								<i class="icon-envelope-black me-1"></i><span id="{{ copy-id }}">{{ site.data.contact.email }}</span>
 							</div>
 							<div class="row">
 								<div class="col d-grid">
 									<a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Napisz</a>
 								</div>
 								<div class="col d-grid">
-									<button class="btn btn-outline-primary" type="button" data-copy-target="#{{ copy-id }}" data-copy-replace="Skopiowane">Kopiuj</button>
+									<button class="btn btn-outline-primary" type="button" data-copy-target="{{ copy-id }}" data-copy-replace="Skopiowane">Kopiuj</button>
 								</div>
 							</div>
 						</div>
