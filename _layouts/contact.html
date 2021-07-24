@@ -37,7 +37,7 @@
 								<h5 id="{{ page.contact.phone.id }}">
 									<a href="#{{ page.contact.phone.id }}">{{ page.contact.phone.title }}</a>
 								</h5>
-								<div class="mb-4">
+								<div class="mb-4 text-ellipsis">
 									<i class="icon-phone-black"></i>
 									<span id="copy-phone">{{ site.data.contact.phone | replace: "-", " "}}</span>
 								</div>
@@ -57,7 +57,7 @@
 								<h5 id="{{ page.contact.email.id }}">
 									<a href="#{{ page.contact.email.id }}">{{ page.contact.email.title }}</a>
 								</h5>
-								<div class="mb-4">
+								<div class="mb-4 text-ellipsis">
 									<i class="icon-envelope-black"></i>
 									<span id="copy-email">{{ site.data.contact.email }}</span>
 								</div>
