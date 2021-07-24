@@ -3,14 +3,12 @@
 	{% include head.html %}
 	<body class="d-flex flex-column min-vh-100">
 		<header class="pattern-tools">
-			{% assign navbar_light = true %}
-			{% assign navbar_space = true %}
 			{% include navbar.html %}
 			<!-- Title -->
 			{% assign images_shift = "5rem" %}
-			<section class="container" style="padding-bottom: {{ images_shift }}">
+			<section class="container mt-4 mt-sm-5" style="padding-bottom: {{ images_shift }}">
 				{% assign services_link = site.data.navigation.navbar | where: 'id', 2 %}
-				<aside class="mb-4 mt-sm-4">
+				<aside class="mb-4">
 					<a class="btn btn-primary" href="{{ site.baseurl }}{{ services_link[0].href }}#{{ page.hash }}">
 						<i class="icon-arrow-left-white me-1"></i>Usługi
 					</a>

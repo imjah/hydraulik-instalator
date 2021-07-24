@@ -1,33 +1,18 @@
-/**
- * -----------------------------------------------------------------------------
- * Copy buttons
- * -----------------------------------------------------------------------------
- */
-
-document.querySelectorAll('[data-copy-target]').forEach(button => {
-	button.addEventListener('click', function() {
-		let text = document.querySelector(this.dataset.copyTarget).textContent;
-
-		navigator.clipboard.writeText(text).then(() => {
-			this.innerHTML = this.dataset.copyReplace;
-		}, e => {
-			console.log(e);
-		});
-	});
-});
-
+window.addEventListener('load', () => {
 /**
  * -----------------------------------------------------------------------------
  * Collapse
  * -----------------------------------------------------------------------------
+ * Bootstrap collapse component replacement. Limited usage.
+ * Collapses target element on button click with transition animation.
  */
 
 document.querySelectorAll('[data-collapse-target]').forEach(button => {
 	button.addEventListener('click', () => {
 		button.setAttribute(
-            'aria-expanded',
-            button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-        );
+			'aria-expanded',
+			button.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+		);
 
 		document.querySelectorAll(button.dataset.collapseTarget).forEach(target => {
 			target.classList.add('collapsing');
@@ -50,60 +35,115 @@ document.querySelectorAll('[data-collapse-target]').forEach(button => {
 
 /**
  * -----------------------------------------------------------------------------
- * ???
+ * Copy buttons
  * -----------------------------------------------------------------------------
+ * Copies target text to clipboard on button click.
  */
 
-(() => {
-	const navbar = document.getElementById('navbar');
-	const navbar_brand = document.getElementById('navbar-brand');
-	const navbar_toggler = document.getElementById('navbar-toggler');
-	const is_navbar_dark = navbar.classList.contains('navbar-dark');
+document.querySelectorAll('[data-copy-target]').forEach(button => {
+	button.addEventListener('click', function() {
+		let text = document.querySelector(this.dataset.copyTarget).textContent;
 
-	const style = () => {
-		if (window.scrollY == 0 && navbar_toggler.attributes['aria-expanded'].value == 'false') {
-			navbar.classList.remove('bg-light', 'shadow-sm');
+		navigator.clipboard.writeText(text).then(() => {
+			this.innerHTML = this.dataset.copyReplace;
+		}, e => {
+			console.log(e);
+		});
+	});
+});
 
-	 		if (is_navbar_dark) {
-	 			navbar.classList.add('navbar-dark');
-	 			navbar.classList.remove('navbar-light');
-	 		}
+/**
+ * -----------------------------------------------------------------------------
+ * Navbar highlight
+ * -----------------------------------------------------------------------------
+ * Makes navbar fixed and changes them style on scroll.
+ */
 
-			navbar_brand.classList.add('upscale');
-	 	} else {
-			navbar.classList.add('bg-light', 'shadow-sm');
+document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
+	function pin()
+	{
+		let filler = document.createElement('div');
+			filler.style.height = `${navbar.offsetHeight}px`;
 
-	 		if (is_navbar_dark) {
-				navbar.classList.add('navbar-light');
-	 			navbar.classList.remove('navbar-dark');
-	 		}
+		navbar.parentNode.prepend(filler);
+		navbar.classList.add('fixed-top');
+	}
 
-	 		navbar_brand.classList.remove('upscale');
-	 	}
-	};
+	function highlight()
+	{
+		if (shouldHighlight())
+			setHighlight();
+		else
+			unsetHighlight();
+	}
 
-	style();
-	window.addEventListener('scroll', style);
-	navbar_toggler.addEventListener('click', style);
-})();
+	function setHighlight()
+	{
+		if (!navbar.classList.contains(bg)) {
+			navbar.classList.remove(defaultcolor);
+			navbar.classList.add(bg, color, shadow);
+			brand.classList.remove(scale);
+		}
+	}
+
+	function unsetHighlight()
+	{
+		if (navbar.classList.contains(bg)) {
+			navbar.classList.remove(bg, color, shadow);
+			navbar.classList.add(defaultcolor);
+			brand.classList.add(scale);
+		}
+	}
+
+	function shouldHighlight()
+	{
+		return window.scrollY || toggler.attributes['aria-expanded'].value == 'true';
+	}
+
+	let brand = navbar.getElementsByClassName('navbar-brand');
+
+	if (brand)
+		brand = brand[0];
+	else
+		return;
+
+	let toggler = navbar.getElementsByClassName('navbar-toggler');
+
+	if (toggler)
+		toggler = toggler[0];
+	else
+		return;
+
+	let bg           = 'bg-light',
+	    color        = 'navbar-light',
+	    defaultcolor = navbar.classList.contains('navbar-dark') ? 'navbar-dark' : 'navbar-light',
+	    scale        = 'upscale',
+	    shadow       = 'shadow-sm';
+
+	pin();
+	highlight();
+	window.addEventListener('scroll', highlight);
+	toggler.addEventListener('click', highlight);
+});
 
 /**
  * -----------------------------------------------------------------------------
  * Shake
  * -----------------------------------------------------------------------------
- * Shakes the item marked in the link.
+ * Shakes the element marked in the link.
  */
 
-window.addEventListener('load', () => {
-    const item = document.getElementById(
-        window.location.hash.replace('#', '') || undefined
-    );
+(() => {
+	let element = document.getElementById(
+		window.location.hash.replace('#', '') || undefined
+	);
 
-    if (item) {
-        item.addEventListener('animationend', function() {
-            this.classList.remove('shake');
-        });
+	if (element) {
+		element.addEventListener('animationend', function() {
+			this.classList.remove('shake');
+		});
 
-        item.classList.add('shake');
-    }
+		element.classList.add('shake');
+	}
+})();
 });

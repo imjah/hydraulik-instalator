@@ -6,12 +6,6 @@
 	margin-right: 0 !important;
 }
 
-.mt-sm-n4 {
-	@media (min-width: map-get($grid-breakpoints, 'sm')) {
-		margin-top: - map-get($spacers, 4);
-	}
-}
-
 .bg {
 	&-blue-500 {
 		color: $white;

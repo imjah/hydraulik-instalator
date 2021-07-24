@@ -1,21 +1,22 @@
-<nav id="navbar" class="navbar navbar-expand-sm fixed-top animate
-		{% if navbar_light %}
-			navbar-light
-		{% else %}
+{% assign expand = "sm" %}
+<nav class="navbar navbar-expand-{{ expand }} animate
+		{% if navbar_dark %}
 			navbar-dark
-		{% endif %}">
+		{% else %}
+			navbar-light
+		{% endif %}" data-fixed-navbar>
 	<div class="container-fluid px-xl-5">
 		<!-- Logotype -->
-		<a id="navbar-brand" class="navbar-brand animate upscale" href="{{ site.baseurl }}/">
-			<img src="{{ site.baseurl }}/assets/img/logotypes/{{ site.data.brand.logo }}" alt="{{ site.data.brand.name }}">
+		<a class="navbar-brand upscale animate" href="{{ site.baseurl }}/">
+			<img src="{{ site.baseurl }}/assets/img/logotypes/hydraulik-instalator.png" alt="{{ site.data.brand.name }}">
 		</a>
-		<!-- Navigation toggle -->
-		<button id="navbar-toggler" class="navbar-toggler" type="button" data-collapse-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
-			<span class="navbar-toggler-icon"></span>
+		<!-- Toggler -->
+		<button class="navbar-toggler" type="button" data-collapse-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Przełącz nawigację">
+			<i class="navbar-toggler-icon"></i>
 		</button>
 		<!-- Navigation -->
 		<div id="main-menu" class="navbar-collapse collapse">
-			<ul class="navbar-nav ms-auto my-3">
+			<ul class="navbar-nav my-3 ms-{{ expand }}-auto">
 				{% for link in site.data.navigation.navbar %}
 					<li class="nav-item mx-2 me-last-0">
 						<a href="{{ site.baseurl }}{{ link.href }}" class="nav-link fw-bold
@@ -33,6 +34,3 @@
 		</div>
 	</div>
 </nav>
-{% if navbar_space %}
-	<div class="mt-sm-4" style="height: 107px"></div>
-{% endif %}
