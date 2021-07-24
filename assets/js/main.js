@@ -86,7 +86,6 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 
 	pin();
 	highlight();
-
 	window.addEventListener('scroll', highlight);
 	toggler.addEventListener('click', highlight);
 
@@ -140,7 +139,7 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 
 (() => {
 	let element = document.getElementById(
-		window.location.hash.replace('#', '') || undefined
+		window.location.hash.replace('#', '') || null
 	);
 
 	if (element) {
