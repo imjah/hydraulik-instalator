@@ -1,6 +1,4 @@
 .card-service {
-	scroll-margin-block: 6em;
-
 	.card-body {
 		@media (min-width: map-get($grid-breakpoints, "md")) {
 			height: 12rem;
