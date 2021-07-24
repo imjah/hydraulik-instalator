@@ -62,41 +62,6 @@ document.querySelectorAll('[data-copy-target]').forEach(button => {
  */
 
 document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
-	let pin = () => {
-		let filler = document.createElement('div');
-		    filler.style.height = `${navbar.offsetHeight}px`;
-
-		navbar.parentNode.prepend(filler);
-		navbar.classList.add('fixed-top');
-	}
-
-	let highlight = () => {
-		if (shouldHighlight())
-			setHighlight();
-		else
-			unsetHighlight();
-	}
-
-	let setHighlight = () => {
-		if (!navbar.classList.contains(bg)) {
-			navbar.classList.remove(defaultcolor);
-			navbar.classList.add(bg, color, shadow);
-			brand.classList.remove(scale);
-		}
-	}
-
-	let unsetHighlight = () => {
-		if (navbar.classList.contains(bg)) {
-			navbar.classList.remove(bg, color, shadow);
-			navbar.classList.add(defaultcolor);
-			brand.classList.add(scale);
-		}
-	}
-
-	let shouldHighlight = () => {
-		return window.scrollY || toggler.attributes['aria-expanded'].value == 'true';
-	}
-
 	let brand = navbar.getElementsByClassName('navbar-brand');
 
 	if (brand)
@@ -122,6 +87,46 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 
 	window.addEventListener('scroll', highlight);
 	toggler.addEventListener('click', highlight);
+
+	function pin()
+	{
+		let filler = document.createElement('div');
+		    filler.style.height = `${navbar.offsetHeight}px`;
+
+		navbar.parentNode.prepend(filler);
+		navbar.classList.add('fixed-top');
+	}
+
+	function highlight()
+	{
+		if (shouldHighlight())
+			setHighlight();
+		else
+			unsetHighlight();
+	}
+
+	function setHighlight()
+	{
+		if (!navbar.classList.contains(bg)) {
+			navbar.classList.remove(defaultcolor);
+			navbar.classList.add(bg, color, shadow);
+			brand.classList.remove(scale);
+		}
+	}
+
+	function unsetHighlight()
+	{
+		if (navbar.classList.contains(bg)) {
+			navbar.classList.remove(bg, color, shadow);
+			navbar.classList.add(defaultcolor);
+			brand.classList.add(scale);
+		}
+	}
+
+	function shouldHighlight()
+	{
+		return window.scrollY || toggler.attributes['aria-expanded'].value == 'true';
+	}
 });
 
 /**
