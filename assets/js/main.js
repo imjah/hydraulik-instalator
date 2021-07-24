@@ -141,8 +141,8 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 	);
 
 	if (element) {
-		element.addEventListener('animationend', function() {
-			this.classList.remove('shake');
+		element.addEventListener('animationend', () => {
+			element.classList.remove('shake');
 		});
 
 		element.classList.add('shake');
