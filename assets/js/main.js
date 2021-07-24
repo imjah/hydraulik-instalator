@@ -43,15 +43,17 @@ document.querySelectorAll('[data-collapse-target]').forEach(button => {
  */
 
 document.querySelectorAll('[data-copy-target]').forEach(button => {
-	button.addEventListener('click', () => {
-		let text = document.querySelector(button.dataset.copyTarget).textContent;
+	let target = document.getElementById(button.dataset.copyTarget || null);
 
-		navigator.clipboard.writeText(text).then(() => {
-			button.innerHTML = button.dataset.copyReplace;
-		}, e => {
-			console.log(e);
+	if (target)
+		button.addEventListener('click', () => {
+			navigator.clipboard.writeText(target.textContent)
+			.then(
+				() => {
+					button.innerHTML = button.dataset.copyReplace;
+				}
+			);
 		});
-	});
 });
 
 /**
