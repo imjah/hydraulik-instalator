@@ -1,15 +1,13 @@
-<footer class="bg-blue-700 text-white">
+<footer class="bg-blue-700">
 	<div class="container py-4">
 		<div class="text-center text-md-start d-md-flex justify-content-md-between">
-			<div class="">
+			<div>
 				{% for link in site.data.navigation.footer %}
-					<a class="link-light me-3 me-last-0" href="{{ link.href }}">
-						{{ link.name }}
-					</a>
+					<a class="link-light me-3 me-last-0" href="{{ link.href }}">{{ link.name }}</a>
 				{% endfor %}
 			</div>
 			<div class="mt-3 mt-md-0">
-				&copy; 2021
+				<span>&copy; 2021 {{ site.data.brand.name }}</span>
 			</div>
 		</div>
 	</div>
