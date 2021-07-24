@@ -43,11 +43,11 @@ document.querySelectorAll('[data-collapse-target]').forEach(button => {
  */
 
 document.querySelectorAll('[data-copy-target]').forEach(button => {
-	button.addEventListener('click', function() {
-		let text = document.querySelector(this.dataset.copyTarget).textContent;
+	button.addEventListener('click', () => {
+		let text = document.querySelector(button.dataset.copyTarget).textContent;
 
 		navigator.clipboard.writeText(text).then(() => {
-			this.innerHTML = this.dataset.copyReplace;
+			button.innerHTML = button.dataset.copyReplace;
 		}, e => {
 			console.log(e);
 		});
