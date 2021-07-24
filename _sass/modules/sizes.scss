@@ -2,10 +2,12 @@
 	@return #{$width * nth($ratio, 2) / nth($ratio, 1)}
 }
 
+[class^='size-'] {
+	width: 100%;
+}
+
 .size {
 	&-infographic {
-		max-width: 100%;
-
 		$ratio: 50, 57;
 		$widths: (
 			'sm': 444,
@@ -24,8 +26,6 @@
 	}
 
 	&-service-thumbnail {
-		max-width: 100%;
-
 		$ratio: 16, 9;
 		$widths: (
 			'sm': 514,
