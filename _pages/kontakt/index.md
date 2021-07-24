@@ -1,32 +1,11 @@
 ---
 layout: contact
-
 title: Kontakt
 description: Zapraszamy do kontaktu. Zadzwoń lub napisz e-maila. Jesteśmy dostępni od poniedziałku do piątku.
 keywords: kontakt, godziny otwarcia, godziny kontaktu, e-mail, telefon
-
-contact:
-  id: skontaktuj-sie-z-nami
-  title: Skontaktuj się z nami
-  subtitle: Masz pytania? Jesteśmy do twojej dyspozycji.
-  phone:
-    id: telefon
-    title: Telefon
-    button:
-      copy: Kopiuj
-      open: Zadzwoń
-  email:
-    id: e-mail
-    title: E-mail
-    button:
-      copy: Kopiuj
-      open: Napisz
-  opening:
-    id: godziny-kontaktu
-    title: Godziny kontaktu
-    hours:
-      - when: "pn. - pt."
-        what: "8:00 - 19:00"
-      - when: "sb. i nd."
-        what: "nieczynne"
+opening-hours:
+  - day  : "pn. - pt."
+    time : "8:00 - 19:00"
+  - day  : "sb. i nd."
+    time : "nieczynne"
 ---

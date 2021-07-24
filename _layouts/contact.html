@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="pl">
 	{% include head.html %}
-	<body class="d-flex flex-column min-vh-100 bg-blue-500">
-		<div class="flex-fill pattern-pipes-lying">
-			<header>
-				{% assign navbar_dark = true %}
-				{% include navbar.html %}
-			</header>
-			<main class="text-white">
-				<!-- Contact -->
-				<section class="container mb-5">
-					<div class="text-center py-3">
-						<h1 id="{{ page.contact.id }}">
-							<a href="#{{ page.contact.id }}">{{ page.contact.title }}</a>
-						</h1>
-						<p>{{ page.contact.subtitle }}</p>
+	<body class="d-flex flex-column min-vh-100 pattern-pipes-lying bg-blue-500">
+		<header>
+			{% assign navbar_dark = true %}
+			{% include navbar.html %}
+		</header>
+		<main class="flex-fill">
+			<!-- Contact -->
+			<section class="container mb-5">
+				<header class="py-3 text-center">
+					{% assign id = "skontaktuj-sie-z-nami" %}
+					<h1 id="{{ id }}">
+						<a href="#{{ id }}">Skontaktuj się z nami</a>
+					</h1>
+					<p>Masz pytania? Jesteśmy do twojej dyspozycji.</p>
+				</header>
+				<article class="row align-items-xl-center">
+					<!-- Opening hours -->
+					<div class="col-12 col-xl-4 order-xl-2 p-0">
+						<div class="p-4 p-xl-5 m-2 bg-primary rounded ">
+							{% assign id = "godziny-kontaktu" %}
+							<h5 id="{{ id }}" class="mb-3">
+								<a href="#{{ id }}">Godziny kontaktu</a>
+							</h5>
+							{% for opening-hour in page.opening-hours %}
+								<div class="d-flex justify-content-between">
+									<p>{{ opening-hour.day }}</p>
+									<p>{{ opening-hour.time }}</p>
+								</div>
+							{% endfor %}
+						</div>
 					</div>
-					<div class="row align-items-xl-center">
-						<!-- Opening -->
-						<div class="col-12 p-0 col-xl-4 order-xl-2">
-							<div class="bg-primary rounded p-4 m-2 p-xl-5">
-								<h5 id="{{ page.contact.opening.id }}" class="mb-3">
-									<a href="#{{ page.contact.opening.id }}">{{ page.contact.opening.title }}</a>
-								</h5>
-								{% for h in page.contact.opening.hours %}
-									<div class="d-flex justify-content-between">
-										<p>{{ h.when }}</p>
-										<p>{{ h.what }}</p>
-									</div>
-								{% endfor %}
+					<!-- Telephone -->
+					<div class="col-12 col-md-5 col-lg-6 col-xl-4 order-xl-1 p-0">
+						<div class="p-4 m-2 me-xxl-4 bg-white text-dark rounded">
+							{% assign id = "telefon" %}
+							<h5 id="{{ id }}">
+								<a href="#{{ id }}">Telefon</a>
+							</h5>
+							<div class="mb-4 text-ellipsis">
+								<i class="icon-phone-black"></i>
+								{% assign copy-id = "copy-phone" %}
+								<span id="{{ copy-id }}">{{ site.data.contact.phone | replace: "-", " "}}</span>
 							</div>
-						</div>
-						<!-- Telephone -->
-						<div class="col-12 p-0 col-md-5 col-lg-6 col-xl-4 order-xl-1">
-							<div class="bg-white text-dark rounded p-4 m-2 me-xxl-4">
-								<h5 id="{{ page.contact.phone.id }}">
-									<a href="#{{ page.contact.phone.id }}">{{ page.contact.phone.title }}</a>
-								</h5>
-								<div class="mb-4 text-ellipsis">
-									<i class="icon-phone-black"></i>
-									<span id="copy-phone">{{ site.data.contact.phone | replace: "-", " "}}</span>
+							<div class="row">
+								<div class="col d-grid">
+									<a class="btn btn-primary" href="tel:{{ site.data.contact.phone }}">Zadzwoń</a>
 								</div>
-								<div class="row">
-									<div class="col d-grid">
-										<a href="tel:{{ site.data.contact.phone }}" class="btn btn-primary">{{ page.contact.phone.button.open }}</a>
-									</div>
-									<div class="col d-grid">
-										<button class="btn btn-outline-primary" type="button" data-copy-target="#copy-phone" data-copy-replace="Skopiowane">{{ page.contact.phone.button.copy }}</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Email -->
-						<div class="col-12 p-0 col-md-7 col-lg-6 col-xl-4 order-xl-3">
-							<div class="bg-white text-dark rounded p-4 m-2 ms-xxl-4">
-								<h5 id="{{ page.contact.email.id }}">
-									<a href="#{{ page.contact.email.id }}">{{ page.contact.email.title }}</a>
-								</h5>
-								<div class="mb-4 text-ellipsis">
-									<i class="icon-envelope-black"></i>
-									<span id="copy-email">{{ site.data.contact.email }}</span>
-								</div>
-								<div class="row">
-									<div class="col d-grid">
-										<a href="mailto:{{ site.data.contact.email }}" class="btn btn-primary">{{ page.contact.email.button.open }}</a>
-									</div>
-									<div class="col d-grid">
-										<button class="btn btn-outline-primary" type="button" data-copy-target="#copy-email" data-copy-replace="Skopiowane">{{ page.contact.email.button.copy }}</button>
-									</div>
+								<div class="col d-grid">
+									<button class="btn btn-outline-primary" type="button" data-copy-target="#{{ copy-id }}" data-copy-replace="Skopiowane">Kopiuj</button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-			</main>
-		</div>
+					<!-- E-mail -->
+					<div class="col-12 col-md-7 col-lg-6 col-xl-4 order-xl-3 p-0">
+						<div class="p-4 m-2 ms-xxl-4 bg-white text-dark rounded">
+							{% assign id = "e-mail" %}
+							<h5 id="{{ id }}">
+								<a href="#{{ id }}">E-mail</a>
+							</h5>
+							<div class="mb-4 text-ellipsis">
+								<i class="icon-envelope-black"></i>
+								{% assign copy-id = "copy-email" %}
+								<span id="{{ copy-id }}">{{ site.data.contact.email }}</span>
+							</div>
+							<div class="row">
+								<div class="col d-grid">
+									<a class="btn btn-primary" href="mailto:{{ site.data.contact.email }}">Napisz</a>
+								</div>
+								<div class="col d-grid">
+									<button class="btn btn-outline-primary" type="button" data-copy-target="#{{ copy-id }}" data-copy-replace="Skopiowane">Kopiuj</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
 		{% include footer.html %}
 		{% include script.html %}
 	</body>
