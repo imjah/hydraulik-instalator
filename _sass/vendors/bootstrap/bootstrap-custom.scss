@@ -1,12 +1,13 @@
-$primary: #fcbe34;
+// Variables
 $btn-font-weight: bold;
-$link-color: inherit;
-$link-hover-color: inherit;
-$link-decoration: none;
-$headings-font-weight: bold;
-$navbar-brand-padding-y: 0;
-$navbar-brand-margin-end: 0;
 $card-color: #000000;
+$headings-font-weight: bold;
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: inherit;
+$navbar-brand-margin-end: 0;
+$navbar-brand-padding-y: 0;
+$primary: #fcbe34;
 
 // Configuration
 @import "functions";
@@ -18,32 +19,13 @@ $card-color: #000000;
 @import "root";
 @import "reboot";
 @import "type";
-@import "images";
 @import "containers";
 @import "grid";
-// @import "tables";
-// @import "forms";
 @import "buttons";
 @import "transitions";
-// @import "dropdown";
-// @import "button-group";
 @import "nav";
 @import "navbar";
 @import "card";
-// @import "accordion";
-// @import "breadcrumb";
-// @import "pagination";
-// @import "badge";
-// @import "alert";
-// @import "progress";
-// @import "list-group";
-// @import "close";
-// @import "toasts";
-// @import "modal";
-// @import "tooltip";
-// @import "popover";
-// @import "carousel";
-// @import "spinners";
 
 // Helpers
 @import "helpers";
