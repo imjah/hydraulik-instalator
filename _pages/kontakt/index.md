@@ -3,7 +3,8 @@ layout: contact
 
 lang: pl
 title: Kontakt
-description:
+description: Zapraszamy do kontaktu. Zadzwoń lub napisz e-maila. Jesteśmy dostępni od poniedziałku do piątku.
+keywords: kontakt, godziny otwarcia, godziny kontaktu, e-mail, telefon
 
 contact:
   id: skontaktuj-sie-z-nami
