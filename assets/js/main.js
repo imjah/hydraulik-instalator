@@ -63,7 +63,7 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 	function pin()
 	{
 		let filler = document.createElement('div');
-			filler.style.height = `${navbar.offsetHeight}px`;
+		    filler.style.height = `${navbar.offsetHeight}px`;
 
 		navbar.parentNode.prepend(filler);
 		navbar.classList.add('fixed-top');
