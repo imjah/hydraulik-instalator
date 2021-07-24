@@ -62,8 +62,7 @@ document.querySelectorAll('[data-copy-target]').forEach(button => {
  */
 
 document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
-	function pin()
-	{
+	let pin = () => {
 		let filler = document.createElement('div');
 		    filler.style.height = `${navbar.offsetHeight}px`;
 
@@ -71,16 +70,14 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 		navbar.classList.add('fixed-top');
 	}
 
-	function highlight()
-	{
+	let highlight = () => {
 		if (shouldHighlight())
 			setHighlight();
 		else
 			unsetHighlight();
 	}
 
-	function setHighlight()
-	{
+	let setHighlight = () => {
 		if (!navbar.classList.contains(bg)) {
 			navbar.classList.remove(defaultcolor);
 			navbar.classList.add(bg, color, shadow);
@@ -88,8 +85,7 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 		}
 	}
 
-	function unsetHighlight()
-	{
+	let unsetHighlight = () => {
 		if (navbar.classList.contains(bg)) {
 			navbar.classList.remove(bg, color, shadow);
 			navbar.classList.add(defaultcolor);
@@ -97,8 +93,7 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 		}
 	}
 
-	function shouldHighlight()
-	{
+	let shouldHighlight = () => {
 		return window.scrollY || toggler.attributes['aria-expanded'].value == 'true';
 	}
 
@@ -124,6 +119,7 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 
 	pin();
 	highlight();
+
 	window.addEventListener('scroll', highlight);
 	toggler.addEventListener('click', highlight);
 });
