@@ -1,0 +1,3 @@
+@function get-height($width, $ratio) {
+	@return $width * nth($ratio, 2) / nth($ratio, 1)
+}
