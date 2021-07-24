@@ -8,7 +8,7 @@ window.addEventListener('load', () => {
  */
 
 document.querySelectorAll('[data-collapse-target]').forEach(button => {
-	let targets = document.querySelectorAll(button.dataset.collapseTarget);
+	let targets = document.querySelectorAll(button.dataset.collapseTarget || null);
 
 	button.addEventListener('click', () => {
 		button.setAttribute(
