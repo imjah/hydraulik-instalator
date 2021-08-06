@@ -126,7 +126,7 @@ document.querySelectorAll('[data-fixed-navbar]').forEach(navbar => {
 
 	function shouldHighlight()
 	{
-		return window.scrollY || toggler.attributes['aria-expanded'].value == 'true';
+		return window.scrollY > 5 || toggler.attributes['aria-expanded'].value == 'true';
 	}
 });
 
