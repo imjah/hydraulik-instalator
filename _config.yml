@@ -11,3 +11,8 @@ defaults:
       type: "services"
     values:
       layout: "service"
+
+plugins:
+  - jekyll-sitemap
+
+url: "https://hydraulik-instalator.stargard.pl"
