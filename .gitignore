@@ -1,2 +1,2 @@
-_site
-.jekyll-cache
+source/_site/
+source/.jekyll-cache/
