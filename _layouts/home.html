@@ -8,11 +8,20 @@
 			<div class="container mb-5 mt-2">
 				<div class="row">
 					<div class="col-12 col-md-8 px-5">
-						{% capture stock %}{{ site.baseurl }}/assets/img/stock/{% endcapture %}
-						<picture>
-							<source media="(max-width: {{ site.data.breakpoint.lg | minus: 1 }}px)" srcset="{{ stock }}{{ page.sections.infographic.img.name.size-600 }}">
-							<img src="{{ stock }}{{ page.sections.infographic.img.name.size-900 }}" alt="{{ page.sections.infographic.img.alt }}" class="size-infographic" loading="lazy">
-						</picture>
+						{% capture graphics %}{{ site.baseurl }}/assets/img/graphics{% endcapture %}
+						<img class="size-infographic"
+						     alt="Infografika"
+						     src="{{ graphics }}/infographic-900.png"
+						     srcset="{{ graphics }}/infographic-600.png 600w,
+						             {{ graphics }}/infographic-900.png 900w"
+						     sizes="(min-width: {{ site.data.breakpoint.sm }}px 444px),
+						            (min-width: {{ site.data.breakpoint.md }}px 384px),
+						            (min-width: {{ site.data.breakpoint.lg }}px 544px),
+						            (min-width: {{ site.data.breakpoint.xl }}px 664px),
+						            (min-width: {{ site.data.breakpoint.xxl }}px 784px),
+						            65vw"
+						     style="aspect-ratio: 50 / 57"
+						     loading="lazy">
 					</div>
 					<div class="col-12 col-md-4 align-self-md-center">
 						<div class="text-center text-md-start pt-4 pt-md-0 px-2 px-md-0 pb-md-5">
