@@ -1,9 +1,9 @@
 ---
 hash: kotlownie-na-paliwa-stale
 title: Kotłownie na paliwa stałe
-brief: Kotły zasilane ekogroszkiem lub peletem z podajnikiem automatycznym lub bez oraz pompą ciepła na CWU.
-description: Instalacja kotłów zasilanych ekogroszkiem lub peletem z podajnikiem automatycznym lub bez oraz pompą ciepła na CWU.
-keywords: kotły co, kotły na ekogroszek, kotły na pelet, kotły z podajnikiem automatycznym, kotły z pompą ciepła, kotły z zasobnikiem, heiztechnik, galmet
+brief: Kotły zasilane ekogroszkiem lub pelletem z podajnikiem automatycznym lub bez oraz pompą ciepła na CWU.
+description: Instalacja kotłów zasilanych ekogroszkiem lub pelletem z podajnikiem automatycznym lub bez oraz pompą ciepła na CWU.
+keywords: kotły co, kotły na ekogroszek, kotły na pellet, kotły z podajnikiem automatycznym, kotły z pompą ciepła, kotły z zasobnikiem, heiztechnik, galmet
 image:
   name: e555.jpg
   alt: Kocioł na paliwo stałe Heiztechnik
