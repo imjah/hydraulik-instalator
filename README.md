@@ -1,4 +1,4 @@
-# Resources
+## Resources
 - [Bootstrap Icons](https://github.com/twbs/icons)
 - [Heating and Cooling](https://www.flaticon.com/packs/heating-and-cooling)
 - [Pipes Pattern](https://www.toptal.com/designers/subtlepatterns/pipes-pattern/)
@@ -6,11 +6,11 @@
 - [Plumbing](https://www.flaticon.com/packs/plumbing-3)
 - [Plumbing water heating system](https://www.freepik.com/free-vector/plumbing-water-heating-system-isometric-view_4283920.htm)
 
-# Libraries
+## Libraries
 - [baguetteBox.js](https://github.com/feimosi/baguetteBox.js)
 - [Bootstrap](https://github.com/twbs/bootstrap)
 
-# License
+## License
 The source code of this project is licensed under the
 [GNU GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
