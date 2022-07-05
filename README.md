@@ -1,19 +1,12 @@
-# Credits
-Many thanks to the creators of these great things that have become part of this project.
-
-## Icons
+# Resources
 - [Bootstrap Icons](https://github.com/twbs/icons)
-- [Heating and Cooling pack](https://www.flaticon.com/packs/heating-and-cooling)
-- [Plumber tools and elements pack](https://www.flaticon.com/packs/plumber-tools-and-elements)
-- [Plumbing pack](https://www.flaticon.com/packs/plumbing-3)
-
-## Patterns
+- [Heating and Cooling](https://www.flaticon.com/packs/heating-and-cooling)
 - [Pipes Pattern](https://www.toptal.com/designers/subtlepatterns/pipes-pattern/)
-
-## Graphics
+- [Plumber tools and elements](https://www.flaticon.com/packs/plumber-tools-and-elements)
+- [Plumbing](https://www.flaticon.com/packs/plumbing-3)
 - [Plumbing water heating system](https://www.freepik.com/free-vector/plumbing-water-heating-system-isometric-view_4283920.htm)
 
-## Libraries
+# Libraries
 - [baguetteBox.js](https://github.com/feimosi/baguetteBox.js)
 - [Bootstrap](https://github.com/twbs/bootstrap)
 
