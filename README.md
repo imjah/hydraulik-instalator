@@ -1,3 +1,5 @@
+![Homepage](.github/homepage.png)
+
 ## Assets
 - [Bootstrap Icons](https://github.com/twbs/icons)
 - [Heating and Cooling](https://www.flaticon.com/packs/heating-and-cooling)
