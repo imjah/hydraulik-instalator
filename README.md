@@ -1,4 +1,4 @@
-## Resources
+## Assets
 - [Bootstrap Icons](https://github.com/twbs/icons)
 - [Heating and Cooling](https://www.flaticon.com/packs/heating-and-cooling)
 - [Pipes Pattern](https://www.toptal.com/designers/subtlepatterns/pipes-pattern/)
