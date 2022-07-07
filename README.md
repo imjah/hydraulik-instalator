@@ -13,8 +13,8 @@
 - [Bootstrap](https://github.com/twbs/bootstrap)
 
 ## License
-The source code is licensed under
+The source code is licensed under the
 [GNU GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-The content which are images and text is licensed under
+The content which are images and text is licensed under the
 [CC BY-NC-ND 4.0 license](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode).
