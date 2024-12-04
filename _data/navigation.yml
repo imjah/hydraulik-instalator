@@ -9,9 +9,6 @@ navbar:
     name: Kontakt
     href: /kontakt/
 footer:
-  - id  : 2
-    name: Olx
-    href: https://www.olx.pl/oferty/uzytkownik/Sz0Ei/
   - id  : 1
     name: GitHub
     href: https://github.com/imjah/hydraulik-instalator
