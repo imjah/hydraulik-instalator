@@ -1,4 +1,4 @@
-![Homepage](.github/homepage.png)
+![Homepage](.github/homepage.webp)
 
 ## Assets
 - [Bootstrap Icons](https://github.com/twbs/icons)
